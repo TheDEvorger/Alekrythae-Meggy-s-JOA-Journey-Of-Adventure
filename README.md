@@ -8,7 +8,6 @@
 
 <br>
 
-<img src="Assets/joa_gateway.png" alt="JOA Gateway" width="430">
 &nbsp;&nbsp;&nbsp;
 <img src="Assets/Bluemoon.png" alt="Blue Moon" width="430">
 
