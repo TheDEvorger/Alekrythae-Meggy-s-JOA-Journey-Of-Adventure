@@ -27,6 +27,7 @@
 ![UI](https://img.shields.io/badge/UI%20contract-11%2F11%20PASS-2ea44f?style=flat-square)
 ![World](https://img.shields.io/badge/world%20engine-PASS-2ea44f?style=flat-square)
 ![Package](https://img.shields.io/badge/application-Alekrythae.alek-cf8cff?style=flat-square)
+![Music Pack](https://img.shields.io/badge/music%20pack-optional-8b5cf6?style=flat-square)
 
 <br><br>
 
@@ -37,6 +38,7 @@ JOA is a world-state machine for adventures.**
 [Visual Tour](#-visual-tour) ·
 [Peoples](#-the-24-canonical-peoples) ·
 [Quick Start](#-quick-start) ·
+[Music Pack](#-optional-music-pack) ·
 [Controls](#-command-atlas--shortcut-cheat-sheet) ·
 [Architecture](#-architecture) ·
 [Documentation](#-documentation) ·
@@ -1219,6 +1221,8 @@ The current v1.0.0 package contains approximately:
 
 These numbers describe the current v1.0.0 source package and can naturally change in later releases.
 
+> The optional soundtrack is distributed separately as the **JOA Music Pack** and is not included in these package counts. The **240 MV voice clips under `Assets/mv-voice/` remain part of the main application package**.
+
 ---
 
 # 🧪 Verification status
@@ -1312,6 +1316,65 @@ Do **not** separate the `.alek` entry file from the `Alekrythae.App` directory. 
 
 ---
 
+# 🎵 Optional Music Pack
+
+JOA v1.0.0 uses a **split release model** so the main application stays smaller and easier to download, verify and update.
+
+The GitHub release is distributed as two independent assets:
+
+```text
+Alekrythae-Meggy-JOA-v1.0.0.zip
+Alekrythae-Meggy-JOA-v1.0.0-Music-Pack.zip
+```
+
+| Release asset | Required? | Purpose |
+|---|---:|---|
+| `Alekrythae-Meggy-JOA-v1.0.0.zip` | **Yes** | Main JOA application, runtime modules, assets, documentation, templates and Meggy voice library |
+| `Alekrythae-Meggy-JOA-v1.0.0-Music-Pack.zip` | **No** | Optional bundled soundtrack |
+
+### JOA works without the Music Pack
+
+The soundtrack is **optional**.
+
+If the Music Pack is not installed, the application still provides its normal world, character, travel, inventory, cartography, Tavern, persistence, Assistant and Adventure systems. Only the bundled background-music library is absent.
+
+### Installing the Music Pack
+
+1. Download and extract `Alekrythae-Meggy-JOA-v1.0.0.zip`.
+2. Download and extract `Alekrythae-Meggy-JOA-v1.0.0-Music-Pack.zip`.
+3. Copy the extracted **`Musics/`** folder into the JOA root directory.
+4. Make sure `Musics/` is beside `Alekrythae.alek`.
+5. Launch JOA, or restart it if it was already open.
+
+The final installation should look like this:
+
+```text
+Alekrythae-Meggy-JOA-v1.0.0/
+├─ Alekrythae.alek
+├─ manifest.json
+├─ Alekrythae.App/
+├─ Assets/
+├─ Templates/
+├─ docs/
+└─ Musics/
+   ├─ 001 - ...
+   ├─ 002 - ...
+   └─ ...
+```
+
+JOA's music module scans the root **`Musics/`** directory for supported audio files and builds the soundtrack list automatically.
+
+Supported music formats include:
+
+```text
+MP3 · M4A · M3A · MP4 · AAC · WAV · OGG · OPUS · FLAC · WMA · WEBM
+```
+
+> **Main package first. Music Pack only if you want the soundtrack.**  
+> Updating the optional soundtrack does not require repackaging the entire JOA application.
+
+---
+
 # 📁 Repository structure
 
 A simplified view:
@@ -1343,6 +1406,8 @@ A simplified view:
 │  ├─ resource-bars/
 │  ├─ taxonomy/
 │  └─ ...
+│
+├─ Musics/                       # Optional · installed from the separate Music Pack
 │
 ├─ Templates/
 │  └─ Alekrytha/
@@ -1508,6 +1573,12 @@ Yes. JOA contains a cartography palette with paint/erase/eyedropper, undo, 24 br
 </details>
 
 <details>
+<summary><strong>Do I need to download the Music Pack?</strong></summary>
+
+No. The Music Pack is optional. Download it only if you want JOA's bundled soundtrack. Extract its `Musics/` folder beside `Alekrythae.alek`; JOA scans that folder automatically when the application starts.
+</details>
+
+<details>
 <summary><strong>Are my actual Adventure saves supposed to be committed to GitHub?</strong></summary>
 
 No. Runtime `Data/`, `Games/`, `Backups/` and live databases are intended to stay outside the public source repository.
@@ -1534,6 +1605,20 @@ Bu proje “birkaç form + harita” değildir.
 - Silinen uygun mevcudat doğrudan yok olmak yerine Unutulmuşlar Mahzeni’nden geri çağrılabilir.
 - `.alekdata` ile veri taşıma/migrasyon altyapısı bulunur.
 - F3 Assistant yüzeyi kişisel API anahtarını repoya gömmek yerine Core SafeAI katmanını kullanır.
+
+### 🎵 İsteğe bağlı Müzik Paketi
+
+JOA'nın ana uygulama paketi müzik arşivinden ayrı dağıtılır. Böylece ana indirme daha küçük kalır.
+
+Müzik istiyorsan GitHub Release içinden ayrıca:
+
+```text
+Alekrythae-Meggy-JOA-v1.0.0-Music-Pack.zip
+```
+
+dosyasını indir. İçindeki `Musics/` klasörünü `Alekrythae.alek` dosyasının yanına kopyala.
+
+Müzik Paketi olmadan da JOA normal çalışır; yalnızca paketlenmiş arka plan müzikleri bulunmaz.
 
 ### Ana yüzeyler
 
@@ -1570,9 +1655,9 @@ Tam Türkçe kullanım rehberi:
 
 ---
 
-漏 2026 TheDEvorger. All rights reserved.
+© 2026 TheDEvorger. All rights reserved.
 
-A艂ek鈥檙y脓h忙, A艂ek鈥檙y脓h忙 Core, `.alek`, and related project names, software components, documentation, visual identity, and original ecosystem concepts are part of the A艂ek鈥檙y脓h忙 project.
+Ałek’ryŧhæ, Ałek’ryŧhæ Core, `.alek`, and related project names, software components, documentation, visual identity, and original ecosystem concepts are part of the Ałek’ryŧhæ project.
 
 Unauthorized copying, redistribution, modification, republication, or commercial use of this software and its documentation is prohibited except where explicitly permitted by the repository license.
 
