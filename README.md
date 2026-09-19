@@ -256,7 +256,7 @@ Ałek’ryŧhæ uses **24 canonical peoples** with their original in-world names
 
 Each people also carries a distinct **primary instinctive sense**: a biological or A̤ɐ͜ɨǣ́ꞎ͡ƣ-based way of interpreting the world. These senses do not replace ordinary sight, hearing or smell; they add another layer of perception. True hybrids may inherit more than one root.
 
-> This section is intentionally public-facing and non-explicit. It focuses on identity, culture, environment and signature abilities rather than private biological or reproductive lore.
+> **In Ałek’ryŧhæ, a people is more than a silhouette: it is a way of sensing, inhabiting and shaping the world.**
 
 ### 🏛️ Ħǽɱ’Ŧʏǽɍŋ
 
