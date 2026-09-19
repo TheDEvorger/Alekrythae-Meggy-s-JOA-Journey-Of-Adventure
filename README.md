@@ -1567,3 +1567,15 @@ Tam Türkçe kullanım rehberi:
 <img src="Assets/alekrythae_logo.png" alt="Ałek’ryŧhæ Logo" width="210">
 
 </div>
+
+---
+
+漏 2026 TheDEvorger. All rights reserved.
+
+A艂ek鈥檙y脓h忙, A艂ek鈥檙y脓h忙 Core, `.alek`, and related project names, software components, documentation, visual identity, and original ecosystem concepts are part of the A艂ek鈥檙y脓h忙 project.
+
+Unauthorized copying, redistribution, modification, republication, or commercial use of this software and its documentation is prohibited except where explicitly permitted by the repository license.
+
+For licensing and legal inquiries:
+
+**thedevorger.alekrythae.dev@gmail.com**
