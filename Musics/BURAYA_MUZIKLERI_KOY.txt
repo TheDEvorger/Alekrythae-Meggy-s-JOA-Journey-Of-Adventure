@@ -1,0 +1,10 @@
+Ałek’ryŧhæ JOA müzik klasörü
+
+Dosyaları numaralandır:
+  1.mp3
+  2.m4a
+  3.mp4
+  4.wav
+
+Numara sırasıyla çalınır. MP4 dosyasında görüntü gösterilmez; HTML audio üzerinden yalnız ses parçası kullanılır.
+Destek, kurulu WebView2/Windows codec desteğine bağlıdır.

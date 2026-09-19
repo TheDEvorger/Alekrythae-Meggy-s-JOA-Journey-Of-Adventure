@@ -1,0 +1,300 @@
+// alek.window.fullscreen = true
+// ============================================================
+// AŁEK’RYŦHÆ · JOURNEY OF ADVENTURER + TAVERN · focused edition
+// Modular .alek application orchestrator.
+// bir modül hata verdiğinde bütün uygulamanın çökmesini önlemek.
+// ============================================================
+
+window.__ALEK_BOOT_PROMISE__=(async function AlekrythaeOrchestrator(){
+    "use strict";
+
+    const APP_BASE="https://alek-assets.local/Alekrythae.App/";
+    // Core'un yetkilendirdiği paket kökü dışına çıkmadan oku. about:blank
+    // üzerindeki WebView2 sanal-host isteği başarısız olsa da köprü çalışır.
+    const resourcePath=path=>{
+        if(typeof path!=="string"||!/^[A-Za-z0-9_./-]+$/.test(path)||path.startsWith("/")||path.split("/").some(part=>!part||part==="."||part===".."))throw new Error(`Geçersiz uygulama dosya yolu: ${path}`);
+        return `Alekrythae.App/${path}`;
+    };
+    const withTimeout=(promise,label,timeoutMs=8000)=>new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error(`${label}: yanıt süresi aşıldı`)),timeoutMs);
+        Promise.resolve(promise).then(value=>{clearTimeout(timer);resolve(value);},error=>{clearTimeout(timer);reject(error);});
+    });
+    const readLocalText=async path=>{
+        const relative=resourcePath(path);
+        const read=typeof window.__alekReadText==="function"?()=>window.__alekReadText(relative)
+            :typeof window.__alekAPI==="function"?()=>window.__alekAPI("fs.readText",{path:relative}):null;
+        if(!read)return {ok:false,error:"bridge_unavailable"};
+        try{
+            const result=await withTimeout(read(),relative);
+            return result?.ok===true&&typeof result.content==="string"?result:{ok:false,error:result?.error||"invalid_bridge_response"};
+        }catch(error){return {ok:false,error:String(error?.message||error)};}
+    };
+    const embeddedManifest={
+        id:"alekrythae.joa-tavern",
+        name:"Ałek’ryŧhæ · Journey of Adventurer + Tavern",
+        version:"1.0.0",
+        architectureRevision:215,
+        entry:"Alekrythae.alek",
+        description:"JOA v1.0.0 kararlı sürüm · mimari revizyon 215",
+        preloads:[
+            "modules/application/native-renderer.module.js",
+            "modules/application/lore-language.module.js"
+        ],
+        modules:[
+            "legacy/legacy-app.js",
+            "modules/application/lifecycle.module.js",
+            "modules/application/performance.module.js",
+            "modules/application/resource-governor.module.js",
+            "modules/application/music.module.js",
+            "modules/application/gpu-auto.module.js",
+            "modules/application/shortcuts.module.js",
+            "modules/journey-simulation/journey-simulation.module.js",
+            "modules/world-map/alekrythae-world-profile.js",
+            "modules/world-map/surface-taxonomy.js",
+            "modules/world-map/chunk-generator.js",
+            "modules/joa-world/joa-world.module.js",
+            "modules/character-stats/canonical-character-ui.module.js"
+        ],
+        styles:["modules/character-stats/stat-circle.css","modules/joa-world/joa-world.css"],
+        postStyles:["modules/character-stats/canonical-character-ui.css"]
+    };
+    // R112 · Tek gerçek manifest Alekrythae.App/manifest.json'dur. Core veya sanal
+    // host hazır değilse gömülü kopya güvenli fallback olarak çalışır; iki sürümün
+    // sessizce ayrışması artık açılışı eski modüllerle başlatamaz.
+    const validManifest=value=>value&&value.id===embeddedManifest.id&&Array.isArray(value.modules)&&Array.isArray(value.styles);
+    let manifest=validManifest(window.__ALEK_EXTERNAL_MANIFEST__)
+        ?{...embeddedManifest,...window.__ALEK_EXTERNAL_MANIFEST__}
+        :embeddedManifest;
+    const localManifest=await readLocalText("manifest.json");
+    if(localManifest.ok){
+        const external=JSON.parse(localManifest.content);
+        if(!validManifest(external))throw new Error("Alekrythae.App/manifest.json geçersiz.");
+        manifest={...embeddedManifest,...external};
+    }
+    if(manifest===embeddedManifest){
+        try{
+            const response=await withTimeout(fetch(`${APP_BASE}manifest.json?alek_manifest=${Date.now().toString(36)}`,{cache:"no-store"}),"Uygulama manifesti");
+            const external=response.ok?await withTimeout(response.json(),"Uygulama manifesti"):null;
+            if(validManifest(external))manifest={...embeddedManifest,...external};
+        }catch(error){console.warn("[Alek] Harici manifest okunamadı; gömülü v1.0.0 manifest kullanılıyor.",error);}
+    }
+
+    const modules=new Map();
+    const listeners=new Map();
+    const status={phase:"booting",startedAt:Date.now(),startedModules:[],failedModules:[],loadedResources:[]};
+
+    const eventBus={
+        on(name,handler){
+            if(typeof handler!=="function")return()=>{};
+            const set=listeners.get(name)||new Set();set.add(handler);listeners.set(name,set);
+            return()=>set.delete(handler);
+        },
+        emit(name,payload){
+            (listeners.get(name)||[]).forEach(handler=>{try{handler(payload);}catch(error){console.error(`[Alek Event:${name}]`,error);}});
+        }
+    };
+
+    const api={
+        manifest,status,eventBus,
+        registerModule(module){
+            if(!module||typeof module.id!=="string"||typeof module.start!=="function")throw new Error("Geçersiz Ałek modülü");
+            if(modules.has(module.id))throw new Error(`Modül zaten kayıtlı: ${module.id}`);
+            modules.set(module.id,{order:100,...module,state:"registered"});
+        },
+        getModule(id){return modules.get(id)||null;},
+        listModules(){return [...modules.values()].map(module=>({id:module.id,order:module.order,state:module.state}));},
+        async startModule(id){
+            const module=modules.get(id);if(!module||module.state==="started")return;
+            module.state="starting";
+            try{
+                await module.start({app:api,bridge:window.__ALEK_LEGACY_BRIDGE__||null,eventBus,manifest});
+                module.state="started";status.startedModules.push(id);eventBus.emit("module:started",{id});
+            }catch(error){
+                module.state="failed";status.failedModules.push({id,error:String(error?.message||error)});
+                console.error(`[Alek Module:${id}]`,error);eventBus.emit("module:failed",{id,error});
+                try{window.Notice&&window.Notice(`Modül başlatılamadı: ${id}`,7000);}catch(_){}
+            }
+        },
+        async stopModule(id){
+            const module=modules.get(id);if(!module||module.state!=="started")return;
+            try{if(typeof module.stop==="function")await module.stop({app:api,bridge:window.__ALEK_LEGACY_BRIDGE__||null,eventBus,manifest});}
+            finally{module.state="stopped";eventBus.emit("module:stopped",{id});}
+        },
+        async stopAll(){
+            const started=[...modules.values()].filter(module=>module.state==="started").sort((a,b)=>b.order-a.order);
+            for(const module of started)await api.stopModule(module.id);
+        }
+    };
+    window.Alekrythae=api;
+    window.__ALEK_ORCHESTRATOR__=api;
+
+    // ------------------------------------------------------------
+    // Kararlı komut kapısı
+    // Core, JavaScript ve modüller Map'i aynı işlev üzerinden çağırır.
+    // Böylece Alt+S, uygulama henüz açılırken basılsa bile kaybolmaz.
+    // ------------------------------------------------------------
+    let worldMapToggleHandler=null;
+    let pendingWorldMapToggle=window.__ALEK_PENDING_WORLD_MAP_TOGGLE__===true;
+    let worldMapToggleAt=0;
+    try{delete window.__ALEK_PENDING_WORLD_MAP_TOGGLE__;}catch(_){}
+
+    const runWorldMapToggle=()=>{
+        const now=Date.now();
+        if(now-worldMapToggleAt<1100)return false;
+        worldMapToggleAt=now;
+        if(status.phase!=="running"||typeof worldMapToggleHandler!=="function"){
+            pendingWorldMapToggle=!pendingWorldMapToggle;
+            return true;
+        }
+        try{return worldMapToggleHandler()!==false;}
+        catch(error){
+            console.error("Map komutu çalıştırılamadı:",error);
+            try{window.Notice&&window.Notice("Map açılamadı: "+(error?.message||error),7000);}catch(_){}
+            return false;
+        }
+    };
+
+    const flushPendingWorldMapToggle=()=>{
+        if(status.phase!=="running"||!pendingWorldMapToggle||typeof worldMapToggleHandler!=="function")return false;
+        pendingWorldMapToggle=false;
+        worldMapToggleAt=0;
+        setTimeout(()=>runWorldMapToggle(),0);
+        return true;
+    };
+
+    window.__ALEK_WORLD_MAP_DISPATCH_OWNED__=true;
+    window.__alekToggleWorldMap=runWorldMapToggle;
+    window.__alekGetWorldMapToggleHandler=()=>worldMapToggleHandler;
+    window.__alekSetWorldMapToggleHandler=handler=>{
+        worldMapToggleHandler=typeof handler==="function"?handler:null;
+        flushPendingWorldMapToggle();
+        return worldMapToggleHandler;
+    };
+
+    // WebView2, aynı sanal URL altındaki eski JavaScript/CSS dosyalarını önbellekten
+    // döndürebilir. Mimari revizyonu sorguya ekleyerek .alek ile görev modüllerinin
+    // daima aynı sürümden yüklenmesini garanti ederiz.
+    // Core R4 aynı .alek yolu açıkken var olan WebView'i yeniden kullanır. Ayrıca
+    // sanal-host yanıtları oturumlar arasında önbellekte kalabilir. Salt mimari
+    // revizyon bu iki durumda yeterli değildir; her gerçek açılışa benzersiz bir
+    // modül URL'si vererek disk/in-memory cache'i kesin olarak atlarız.
+    const bootRevision=`${manifest.architectureRevision}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2,8)}`;
+    window.__ALEK_LOADED_BUILD__={architectureRevision:manifest.architectureRevision,bootRevision,entry:manifest.entry};
+    const moduleUrl=path=>{
+        resourcePath(path);
+        const separator=String(path).includes("?")?"&":"?";
+        return `${APP_BASE}${path}${separator}alek_revision=${encodeURIComponent(bootRevision)}`;
+    };
+    const resourceFailure=(label,path,local,error)=>new Error(`${label}: ${resourcePath(path)}\nYerel okuma: ${local.error||"unknown"}; adres yüklemesi: ${error?.message||error}.\nZIP'in tamamını bir klasöre çıkarın. Alekrythae.alek ile Alekrythae.App klasörü yan yana olmalıdır. Açmak için Alekrythae.alek dosyasını Ałek’ryŧhæ Core v2.0.0 ile açın.`);
+    const loadScriptUrl=src=>new Promise((resolve,reject)=>{
+        const script=document.createElement("script");
+        script.src=moduleUrl(src);
+        script.async=false;
+        script.dataset.alekModule=src;
+        let executionError=null;
+        const onError=event=>{if(event.filename===script.src)executionError=event.error||new Error(event.message);};
+        const cleanup=()=>{clearTimeout(timer);window.removeEventListener("error",onError);};
+        const timer=setTimeout(()=>{cleanup();script.remove();reject(new Error("kod isteği zaman aşımı"));},8000);
+        script.onload=()=>{cleanup();if(executionError)reject(executionError);else resolve(src);};
+        script.onerror=()=>{cleanup();script.remove();reject(new Error(`Kod parçası yüklenemedi: ${src}`));};
+        window.addEventListener("error",onError);
+        document.head.appendChild(script);
+    });
+    const loadScript=async src=>{
+        const local=await readLocalText(src);
+        if(local.ok){
+            const script=document.createElement("script"),url=moduleUrl(src);
+            let executionError=null;
+            const onError=event=>{if(event.filename===url)executionError=event.error||new Error(event.message);};
+            script.dataset.alekModule=src;script.dataset.alekTransport="core-file";
+            script.textContent=local.content+`\n//# sourceURL=${url}\n`;
+            window.addEventListener("error",onError);
+            try{document.head.appendChild(script);}finally{window.removeEventListener("error",onError);}
+            if(executionError)throw executionError;
+        }else{
+            try{await loadScriptUrl(src);}catch(error){throw resourceFailure("Kod parçası açılamadı",src,local,error);}
+        }
+        status.loadedResources.push({path:src,transport:local.ok?"core-file":"virtual-host",kind:"script"});
+        return src;
+    };
+    const loadStyleUrl=href=>new Promise((resolve,reject)=>{
+        const link=document.createElement("link");
+        link.rel="stylesheet";
+        link.href=moduleUrl(href);
+        link.dataset.alekStyle=href;
+        const timer=setTimeout(()=>{link.remove();reject(new Error("stil isteği zaman aşımı"));},8000);
+        link.onload=()=>{clearTimeout(timer);resolve(href);};
+        link.onerror=()=>{clearTimeout(timer);link.remove();reject(new Error(`Stil yüklenemedi: ${href}`));};
+        document.head.appendChild(link);
+    });
+    const rebaseStyle=(text,href)=>{
+        const absolute=value=>/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(value)?value:new URL(value,moduleUrl(href)).href;
+        return text.replace(/url\(\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)'|([^)]*?))\s*\)/gi,(match,double,single,bare)=>{
+            const value=(double??single??bare).trim();
+            return value?`url(${JSON.stringify(absolute(value))})`:match;
+        }).replace(/(@import\s+)(["'])([^"']+)\2/gi,(_match,prefix,_quote,value)=>prefix+JSON.stringify(absolute(value)));
+    };
+    const loadStyle=async href=>{
+        const local=await readLocalText(href);
+        if(local.ok){
+            const style=document.createElement("style");
+            style.dataset.alekStyle=href;style.dataset.alekTransport="core-file";
+            style.textContent=rebaseStyle(local.content,href);
+            document.head.appendChild(style);
+        }else{
+            try{await loadStyleUrl(href);}catch(error){throw resourceFailure("Stil dosyası açılamadı",href,local,error);}
+        }
+        status.loadedResources.push({path:href,transport:local.ok?"core-file":"virtual-host",kind:"style"});
+        return href;
+    };
+    const waitFor=(predicate,timeoutMs=30000)=>new Promise((resolve,reject)=>{
+        const started=Date.now();
+        const tick=()=>{try{if(predicate())return resolve(true);}catch(_){}if(Date.now()-started>timeoutMs)return reject(new Error("Uygulama hazırlık süresi aşıldı"));setTimeout(tick,40);};tick();
+    });
+
+    for(const style of manifest.styles)await loadStyle(style);
+
+    // Renderer, Legacy arayüz kurulmadan önce hazırlanır. Böylece açılışın ilk
+    // karesinde dahi 240 ayrı DOM/compositor katmanı oluşturulmaz.
+    for(const src of manifest.preloads||[])await loadScript(src);
+
+    // Eski çalışan ürün önce ayrı bir uyumluluk modülü olarak açılır.
+    // Böylece özellik kaybetmeden parça parça yeni mimariye taşınabilir.
+    await loadScript(manifest.modules[0]);
+    // A script's load event does not await its asynchronous initialization.
+    // Wait for the actual database, UI and bridge setup before starting modules.
+    if(window.__ALEK_LEGACY_BOOT_PROMISE__){
+        const legacy=await withTimeout(window.__ALEK_LEGACY_BOOT_PROMISE__,"Ana uygulama açılışı",30000);
+        if(legacy?.ok!==true)throw legacy?.error||new Error("Ana uygulama başlatılamadı.");
+    }
+    await waitFor(()=>window.__ALEK_LEGACY_READY__===true&&window.__ALEK_LEGACY_BRIDGE__);
+
+    // Legacy katmanın bütün inline sözleşmeleri kurulduktan sonra yalnızca son,
+    // kanonik karakter arayüzü uygulanır. Böylece CSS sırası tesadüfe kalmaz.
+    for(const style of manifest.postStyles||[])await loadStyle(style);
+
+    // Yeni görev modülleri bundan sonra .alek tarafından sırayla çağrılır.
+    for(const src of manifest.modules.slice(1))await loadScript(src);
+    const ordered=[...modules.values()].sort((a,b)=>a.order-b.order);
+    for(const module of ordered)await api.startModule(module.id);
+
+    status.phase="running";status.readyAt=Date.now();
+    flushPendingWorldMapToggle();
+    eventBus.emit("app:ready",{manifest,status});
+    window.addEventListener("beforeunload",()=>{void api.stopAll();},{once:true});
+    console.info("Ałek’ryŧhæ orkestrası hazır",api.listModules());
+})().catch(error=>{
+    if(window.__ALEK_ORCHESTRATOR__){window.__ALEK_ORCHESTRATOR__.status.phase="failed";window.__ALEK_ORCHESTRATOR__.status.error=String(error?.message||error);}
+    window.__ALEK_BOOT_ERROR__=String(error?.message||error);
+    console.error("AŁEK'RYŦHÆ Orkestratör çöktü:",error);
+    try{window.Notice&&window.Notice("🛑 Orkestratör hatası: "+(error?.message||error),9000);}catch(_){}
+    try{
+        const box=document.createElement("div");
+        box.dataset.alekBootError="true";
+        box.style.cssText="position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;background:#02060b;color:#a9dff4;font:14px/1.5 Consolas,monospace;padding:32px";
+        const pre=document.createElement("pre");
+        pre.style.cssText="max-width:min(900px,90vw);white-space:pre-wrap;border:1px solid #24475a;background:#061019;padding:18px;border-radius:12px;box-shadow:0 0 28px rgba(39,151,205,.18)";
+        pre.textContent="Ałek’ryŧhæ başlatılamadı.\n\n"+String(error?.stack||error?.message||error);
+        box.appendChild(pre);document.body.appendChild(box);
+    }catch(_){}
+});

@@ -1,0 +1,34 @@
+{
+  "id": "alekrythae.joa-tavern",
+  "name": "Ałek’ryŧhæ · Journey of Adventurer + Tavern",
+  "version": "1.0.0",
+  "architectureRevision": 215,
+  "entry": "Alekrythae.alek",
+  "description": "JOA v1.0.0 kararlı sürüm: Mevcudat, yaşayan dünya haritası, seyahat, Tavern, karakter kaynakları, kartografya ve veri taşıma sistemlerini tek modüler paket altında sunar. Mimari revizyon 215 korunur.",
+  "preloads": [
+    "modules/application/native-renderer.module.js",
+    "modules/application/lore-language.module.js"
+  ],
+  "modules": [
+    "legacy/legacy-app.js",
+    "modules/application/lifecycle.module.js",
+    "modules/application/performance.module.js",
+    "modules/application/resource-governor.module.js",
+    "modules/application/music.module.js",
+    "modules/application/gpu-auto.module.js",
+    "modules/application/shortcuts.module.js",
+    "modules/journey-simulation/journey-simulation.module.js",
+    "modules/world-map/alekrythae-world-profile.js",
+    "modules/world-map/surface-taxonomy.js",
+    "modules/world-map/chunk-generator.js",
+    "modules/joa-world/joa-world.module.js",
+    "modules/character-stats/canonical-character-ui.module.js"
+  ],
+  "styles": [
+    "modules/character-stats/stat-circle.css",
+    "modules/joa-world/joa-world.css"
+  ],
+  "postStyles": [
+    "modules/character-stats/canonical-character-ui.css"
+  ]
+}

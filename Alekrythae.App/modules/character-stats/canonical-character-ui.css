@@ -1,0 +1,1579 @@
+/* R43 · Karakter kağıdı, kaynak rayı, Stat Dairesi ve Çanta için
+   legacy tamamlandıktan sonra yüklenen tek kanonik görsel sözleşme. */
+
+/* --------------------------------------------------------------------------
+   TÜR / HALK MÜHÜRLERİ
+   -------------------------------------------------------------------------- */
+#alekLegacyMainPanel .r21-origin-selects > label {
+  display: grid !important;
+  min-width: 0 !important;
+  gap: 6px !important;
+}
+#alekLegacyMainPanel .r21-origin-picker.origin-picker-clean {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 46px !important;
+  align-items: stretch !important;
+  gap: 9px !important;
+}
+#alekLegacyMainPanel .r21-origin-picker.origin-picker-clean > select {
+  width: 100% !important;
+  min-height: 46px !important;
+  border-radius: 9px !important;
+}
+#alekLegacyMainPanel .origin-action-button.r21-origin-rune {
+  all: unset !important;
+  box-sizing: border-box !important;
+  width: 46px !important;
+  min-width: 46px !important;
+  height: 46px !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 7px !important;
+  border: 1px solid rgba(83, 210, 244, .72) !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle at 34% 27%, rgba(110, 235, 255, .22), rgba(8, 31, 46, .98) 54%, #050a12 100%) !important;
+  color: #75e7ff !important;
+  box-shadow: inset 0 0 15px rgba(94, 222, 255, .10), 0 0 13px rgba(70, 202, 242, .13) !important;
+  cursor: pointer !important;
+  transition: transform .16s ease, filter .16s ease, border-color .16s ease, box-shadow .16s ease !important;
+}
+#alekLegacyMainPanel .origin-action-button.r21-origin-rune svg {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: visible !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.55 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  filter: drop-shadow(0 0 4px currentColor) !important;
+}
+#alekLegacyMainPanel .origin-action-button.r21-origin-rune .rune-cyan { stroke: #63e8ff !important; }
+#alekLegacyMainPanel .origin-action-button.r21-origin-rune .rune-gold { stroke: #ffd568 !important; }
+#alekLegacyMainPanel .origin-action-button.r21-origin-rune .rune-white { stroke: #f4fbff !important; }
+#alekLegacyMainPanel .origin-action-button.r21-origin-rune .rune-blue { stroke: #5fa9ff !important; fill: #5fa9ff !important; }
+#alekLegacyMainPanel .origin-action-button.origin-species-button.is-custom {
+  color: #ffd66d !important;
+  border-color: rgba(239, 190, 62, .82) !important;
+  background: radial-gradient(circle at 34% 27%, rgba(255, 221, 105, .25), rgba(45, 28, 8, .98) 56%, #07101a 100%) !important;
+}
+#alekLegacyMainPanel .origin-action-button.origin-people-button {
+  color: #8ff2cd !important;
+  border-color: rgba(88, 221, 178, .70) !important;
+  background: radial-gradient(circle at 34% 27%, rgba(105, 244, 205, .21), rgba(6, 38, 34, .98) 56%, #07101a 100%) !important;
+}
+#alekLegacyMainPanel .origin-action-button.r21-origin-rune:hover:not(:disabled),
+#alekLegacyMainPanel .origin-action-button.r21-origin-rune:focus-visible {
+  transform: translateY(-1px) scale(1.035) !important;
+  filter: brightness(1.13) !important;
+  border-color: #fff0aa !important;
+  box-shadow: 0 0 20px rgba(84, 218, 255, .25), 0 0 13px rgba(239, 195, 74, .18) !important;
+}
+#alekLegacyMainPanel .origin-action-button.r21-origin-rune:disabled { opacity: .40 !important; cursor: not-allowed !important; }
+
+/* --------------------------------------------------------------------------
+   KAYNAK BARLARI · DAR, DİP DİBE, BİRBİRİNİN ALANINA GİRMEZ
+   -------------------------------------------------------------------------- */
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail {
+  grid-template-columns: 176px minmax(0, 1fr) !important;
+  column-gap: 0 !important;
+  overflow: hidden !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail {
+  position: relative !important;
+  inset: auto !important;
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  width: 176px !important;
+  min-width: 176px !important;
+  max-width: 176px !important;
+  height: 100% !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, 44px) !important;
+  gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #05090d !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail > .vertical-resource {
+  position: relative !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 5px 8.2px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 4px !important;
+  box-sizing: border-box !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-radius: 0 !important;
+  background: linear-gradient(180deg, rgba(7, 13, 19, .99), rgba(1, 5, 9, .99)) !important;
+  box-shadow: inset 0 0 13px rgba(0, 0, 0, .68) !important;
+  overflow: hidden !important;
+  backdrop-filter: none !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail > .vertical-resource + .vertical-resource {
+  margin-left: 0 !important;
+  border-left-width: 1px !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail > .vertical-resource:first-child {
+  border-radius: 5px 0 0 5px !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-heading {
+  width: 100% !important;
+  min-height: 51px !important;
+  max-height: 51px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 2px !important;
+  overflow: hidden !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-sigil,
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-sigil svg {
+  width: 21px !important;
+  min-width: 21px !important;
+  max-width: 21px !important;
+  height: 21px !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-heading strong {
+  display: block !important;
+  width: 42px !important;
+  max-width: 42px !important;
+  margin: 0 !important;
+  color: inherit !important;
+  font-size: .42rem !important;
+  line-height: 1 !important;
+  letter-spacing: -.055em !important;
+  writing-mode: horizontal-tb !important;
+  transform: none !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: clip !important;
+  text-align: center !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-meter {
+  position: relative !important;
+  width: 25.6px !important;
+  min-width: 25.6px !important;
+  max-width: 25.6px !important;
+  flex: 1 1 auto !important;
+  min-height: 170px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border-radius: 12px !important;
+  background: #010306 !important;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, .98), 0 0 0 1px rgba(255, 255, 255, .035) !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  contain: layout paint !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-meter > *,
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-meter canvas,
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .energy-flow,
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .energy-flow-canvas,
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .resource-energy-canvas,
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .resource-energy-lane {
+  width: 25.6px !important;
+  min-width: 25.6px !important;
+  max-width: 25.6px !important;
+  border-radius: 12px !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-fill,
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-lag {
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-meter::after {
+  border-radius: 12px !important;
+  background: linear-gradient(90deg, rgba(255, 255, 255, .10), transparent 28% 76%, rgba(255, 255, 255, .035)) !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-readout {
+  display: none !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .character-detail-content {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  overflow: hidden !important;
+  border-left: 0 !important;
+  transform: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   24 STAT DAİRESİ · ÇEMBER + GERÇEK SVG RÜNLER + AÇIKLAMA PANELİ
+   -------------------------------------------------------------------------- */
+.alek-stat-modal-overlay {
+  padding: 10px !important;
+  overflow: hidden !important;
+  place-items: center !important;
+  background: rgba(0, 5, 9, .97) !important;
+}
+.alek-stat-modal-overlay .alek-stat-modal {
+  position: relative !important;
+  width: min(1660px, calc(100vw - 20px)) !important;
+  height: min(980px, calc(100dvh - 20px)) !important;
+  max-width: none !important;
+  max-height: none !important;
+  display: grid !important;
+  grid-template-rows: minmax(0, 1fr) auto !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(226, 184, 61, .68) !important;
+  border-radius: 17px !important;
+  background: linear-gradient(150deg, #06141d, #01060b 74%) !important;
+  box-shadow: 0 0 0 1px rgba(83, 200, 239, .14), 0 28px 90px rgba(0, 0, 0, .82) !important;
+}
+.alek-stat-modal-overlay .alek-stat-modal-body {
+  position: relative !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  display: grid !important;
+  grid-template-columns: minmax(640px, 1fr) minmax(340px, 400px) !important;
+  gap: 14px !important;
+  padding: 12px !important;
+  overflow: hidden !important;
+}
+.alek-stat-modal-overlay .alek-stat-wheel-shell {
+  position: relative !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  display: grid !important;
+  grid-template-rows: minmax(0, 1fr) auto !important;
+  place-items: center !important;
+  gap: 4px !important;
+  padding: 7px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(90, 174, 207, .28) !important;
+  border-radius: 14px !important;
+  background: radial-gradient(circle, rgba(19, 106, 145, .12), #01070b 72%) !important;
+}
+.alek-stat-modal-overlay .alek-stat-wheel {
+  position: relative !important;
+  width: var(--alek-stat-wheel-size, min(100%, 920px)) !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 100% !important;
+  margin: 0 auto !important;
+  background: #01070b !important;
+  overflow: visible !important;
+  isolation: isolate !important;
+}
+.alek-stat-modal-overlay .alek-stat-axis-legend {
+  position: static !important;
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 6px !important;
+  padding: 6px 8px 2px !important;
+  border-top: 1px solid rgba(78, 154, 185, .20) !important;
+  background: transparent !important;
+}
+.alek-stat-modal-overlay .alek-stat-axis-legend span {
+  padding: 5px 7px !important;
+  border: 1px solid rgba(99, 194, 227, .24) !important;
+  border-radius: 999px !important;
+  background: rgba(4, 16, 24, .90) !important;
+  color: #8eabb8 !important;
+  text-align: center !important;
+}
+.alek-stat-modal-overlay .alek-stat-axis-legend b { color: #efd06e !important; }
+.alek-stat-modal-overlay .r23-stat-quadrant-labels {
+  z-index: 9 !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  pointer-events: none !important;
+}
+.alek-stat-modal-overlay .r23-stat-quadrant-labels text {
+  font: 800 32px Georgia, serif !important;
+  letter-spacing: .025em !important;
+  text-anchor: middle !important;
+  paint-order: stroke fill !important;
+  stroke-width: 7px !important;
+  stroke-linejoin: round !important;
+}
+.alek-stat-modal-overlay .r23-stat-quadrant-labels .q-northwest { fill: #e7b9ff !important; stroke: #190b28 !important; filter: drop-shadow(0 0 6px rgba(215, 133, 255, .42)) !important; }
+.alek-stat-modal-overlay .r23-stat-quadrant-labels .q-northeast { fill: #f5d46f !important; stroke: #261a04 !important; filter: drop-shadow(0 0 6px rgba(245, 199, 69, .38)) !important; }
+.alek-stat-modal-overlay .r23-stat-quadrant-labels .q-southeast { fill: #9df4eb !important; stroke: #031b1e !important; filter: drop-shadow(0 0 6px rgba(80, 229, 221, .38)) !important; }
+.alek-stat-modal-overlay .r23-stat-quadrant-labels .q-southwest { fill: #b9d7ff !important; stroke: #071329 !important; filter: drop-shadow(0 0 6px rgba(83, 157, 255, .40)) !important; }
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70 {
+  --alek-stat-node-size: 56px;
+  width: var(--alek-stat-node-size) !important;
+  height: var(--alek-stat-node-size) !important;
+  inline-size: var(--alek-stat-node-size) !important;
+  block-size: var(--alek-stat-node-size) !important;
+  min-width: var(--alek-stat-node-size) !important;
+  min-height: var(--alek-stat-node-size) !important;
+  max-width: var(--alek-stat-node-size) !important;
+  max-height: var(--alek-stat-node-size) !important;
+  aspect-ratio: 1 / 1 !important;
+  box-sizing: border-box !important;
+  line-height: 1 !important;
+  flex: 0 0 auto !important;
+  padding: 0 !important;
+  border: 1px solid rgba(239, 195, 91, .88) !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle at 36% 28%, color-mix(in srgb, var(--tax-symbol) 26%, #231609), rgba(4, 7, 12, .99) 70%) !important;
+  color: var(--tax-symbol) !important;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .52), inset 0 0 0 2px #100c08, inset 0 0 0 4px rgba(235, 190, 79, .20), 0 0 14px color-mix(in srgb, var(--tax-symbol) 28%, transparent) !important;
+}
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70:hover,
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70.selected {
+  transform: translate(-50%, -50%) scale(1.13) !important;
+  border-color: #ffe29a !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .5), 0 0 26px color-mix(in srgb, var(--tax-symbol) 52%, transparent), inset 0 0 0 1px rgba(255, 255, 255, .11) !important;
+}
+.alek-stat-modal-overlay .alek-stat-node .taxonomy-node-symbol.alek-stat-sigil {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 62% !important;
+  height: 62% !important;
+  transform: translate(-50%, -50%) !important;
+  display: grid !important;
+  place-items: center !important;
+  color: var(--tax-symbol) !important;
+}
+.alek-stat-modal-overlay .alek-stat-node .alek-stat-rune-svg,
+.alek-stat-modal-overlay .selected-sigil .alek-stat-rune-svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  overflow: visible !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.75 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  filter: drop-shadow(0 0 4px currentColor) !important;
+}
+.alek-stat-modal-overlay .alek-stat-rune-svg path,
+.alek-stat-modal-overlay .alek-stat-rune-svg circle,
+.alek-stat-modal-overlay .alek-stat-rune-svg line,
+.alek-stat-modal-overlay .alek-stat-rune-svg polygon,
+.alek-stat-modal-overlay .alek-stat-rune-svg polyline {
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+.alek-stat-modal-overlay .alek-stat-node .alek-stat-value {
+  position: absolute !important;
+  right: -1px !important;
+  bottom: -1px !important;
+  min-width: 17px !important;
+  height: 17px !important;
+  padding: 0 3px !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 1px solid color-mix(in srgb, var(--tax-symbol) 64%, white) !important;
+  border-radius: 999px !important;
+  background: #020a10 !important;
+  color: #fff !important;
+  font: 800 .49rem/1 ui-monospace, Consolas, monospace !important;
+  z-index: 12 !important;
+}
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70::after {
+  content: attr(aria-label) !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: calc(100% + 7px) !important;
+  z-index: 30 !important;
+  width: max-content !important;
+  max-width: 150px !important;
+  padding: 4px 7px !important;
+  border: 1px solid color-mix(in srgb, var(--tax-symbol) 48%, #24333c) !important;
+  border-radius: 7px !important;
+  background: rgba(2, 9, 14, .96) !important;
+  color: #edf8fb !important;
+  font: 750 .58rem/1.2 Arial, sans-serif !important;
+  text-align: center !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translate(-50%, -3px) !important;
+  transition: opacity .14s ease, transform .14s ease !important;
+}
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70:hover::after,
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70:focus-visible::after {
+  opacity: 1 !important;
+  transform: translate(-50%, 0) !important;
+}
+.alek-stat-modal-overlay .alek-stat-detail-panel {
+  position: relative !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  width: auto !important;
+  overflow: auto !important;
+  padding: 15px !important;
+  border: 1px solid rgba(91, 206, 239, .43) !important;
+  border-radius: 15px !important;
+  background: radial-gradient(circle at 20% 0%, rgba(51, 171, 211, .10), transparent 34%), linear-gradient(155deg, #081a24, #02090e 76%) !important;
+  color: #dceaf0 !important;
+  box-shadow: inset 0 0 0 1px rgba(233, 194, 74, .08), 0 18px 42px rgba(0, 0, 0, .38) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: none !important;
+}
+.alek-stat-modal-overlay .alek-stat-selected-head { padding: 0 0 13px !important; border-bottom: 1px solid rgba(91, 188, 221, .24) !important; }
+.alek-stat-modal-overlay .selected-sigil { width: 54px !important; height: 54px !important; flex: 0 0 54px !important; color: #79e5ff !important; }
+.alek-stat-modal-overlay .alek-stat-description { min-height: 72px !important; color: #aebfc7 !important; font: italic .78rem/1.6 Georgia, serif !important; }
+.alek-stat-modal-overlay .alek-stat-value-editor { border-color: rgba(83, 176, 210, .48) !important; background: rgba(5, 18, 27, .92) !important; }
+.alek-stat-modal-overlay .alek-stat-modal-footer {
+  position: relative !important;
+  width: auto !important;
+  min-height: 56px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  padding: 9px 14px !important;
+  border-top: 1px solid rgba(84, 169, 201, .28) !important;
+  background: #040d13 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: none !important;
+}
+/* --------------------------------------------------------------------------
+   KANONİK ÇANTA · 24 YUVA + EŞYA MÜHRÜ + TAŞI / TAKAS
+   -------------------------------------------------------------------------- */
+.alek-inventory-canonical {
+  height: 100% !important;
+  min-height: 0 !important;
+  display: grid !important;
+  grid-template-rows: auto minmax(0, 1fr) !important;
+  gap: 14px !important;
+  padding: 12px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(82, 174, 209, .24) !important;
+  border-radius: 17px !important;
+  background: radial-gradient(circle at 50% 0%, rgba(45, 170, 214, .08), transparent 36%), linear-gradient(180deg, rgba(5, 16, 24, .98), rgba(2, 8, 13, .99)) !important;
+  box-sizing: border-box !important;
+}
+
+/* R49 · kaynak çerçeveleri tek bitişik ray; kapsül ölçüsü korunur. */
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail {
+  grid-template-columns: 173px minmax(0, 1fr) !important;
+  column-gap: 0 !important;
+  gap: 0 !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail {
+  width: 173px !important;
+  min-width: 173px !important;
+  max-width: 173px !important;
+  display: flex !important;
+  flex-flow: row nowrap !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  gap: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail > .vertical-resource {
+  flex: 0 0 44px !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
+  margin: 0 !important;
+  border-width: 1px !important;
+  border-radius: 0 !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail > .vertical-resource + .vertical-resource {
+  margin-left: -1px !important;
+  border-left-width: 1px !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-heading strong {
+  width: 42px !important;
+  max-width: 42px !important;
+  font-size: .38rem !important;
+  letter-spacing: -.08em !important;
+  text-overflow: clip !important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .character-detail-content {
+  min-width: 0 !important;
+  width: auto !important;
+  margin-left: -1px !important;
+  border-left: 1px solid rgba(105, 161, 184, .46) !important;
+}
+
+/* R49 · sanal çantada slot motorunun koordinatları eski yüzde yüz kurallarından üstündür. */
+#alekLegacyMainPanel .alek-inventory-window > .alek-item-slot {
+  position: absolute !important;
+  left: var(--slot-left, 0) !important;
+  top: var(--slot-top, 0) !important;
+  width: var(--slot-size, 72px) !important;
+  height: var(--slot-size, 72px) !important;
+  min-width: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+  pointer-events: auto !important;
+  margin: 0 !important;
+}
+#alekLegacyMainPanel .alek-item-slot.empty {
+  opacity: .82 !important;
+  background: linear-gradient(135deg, rgba(226, 190, 81, .035), transparent 25%), radial-gradient(circle at 50% 46%, rgba(57, 172, 213, .055), #02090e 72%) !important;
+}
+#alekLegacyMainPanel .alek-empty-slot-seal {
+  position: relative !important;
+  width: 34% !important;
+  height: 34% !important;
+  display: block !important;
+  transform: rotate(45deg) !important;
+  border: 1px solid rgba(91, 205, 237, .58) !important;
+  box-shadow: 0 0 13px rgba(75, 196, 232, .12), inset 0 0 9px rgba(231, 193, 79, .04) !important;
+}
+#alekLegacyMainPanel .alek-empty-slot-seal::before,
+#alekLegacyMainPanel .alek-empty-slot-seal::after,
+#alekLegacyMainPanel .alek-empty-slot-seal i {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  border: 1px solid rgba(226, 190, 81, .34) !important;
+}
+#alekLegacyMainPanel .alek-empty-slot-seal::before { width: 58% !important; height: 58% !important; }
+#alekLegacyMainPanel .alek-empty-slot-seal::after { width: 8% !important; height: 8% !important; background: #75dcf7 !important; box-shadow: 0 0 8px rgba(82, 211, 245, .75) !important; }
+#alekLegacyMainPanel .alek-empty-slot-seal i { width: 132% !important; height: 1px !important; border-width: 1px 0 0 !important; transform: translate(-50%, -50%) rotate(-45deg) !important; opacity: .35 !important; }
+
+
+.alek-inventory-toolbar {
+  min-height: 58px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  padding: 0 5px 11px !important;
+  border-bottom: 1px solid rgba(91, 190, 224, .22) !important;
+}
+.alek-inventory-toolbar > div { display: grid !important; gap: 3px !important; }
+.alek-inventory-toolbar small { color: #70d7f2 !important; font: 800 .57rem/1 Arial, sans-serif !important; letter-spacing: .16em !important; }
+.alek-inventory-toolbar strong { color: #eadba7 !important; font: 800 1.05rem/1.1 Georgia, serif !important; }
+.alek-inventory-toolbar [data-add] {
+  all: unset !important;
+  box-sizing: border-box !important;
+  min-width: 112px !important;
+  height: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 14px !important;
+  border: 1px solid rgba(226, 184, 66, .72) !important;
+  border-radius: 10px !important;
+  background: linear-gradient(160deg, #102630, #050c12) !important;
+  color: #f2df9e !important;
+  font-weight: 850 !important;
+  cursor: pointer !important;
+  box-shadow: inset 0 0 13px rgba(76, 197, 235, .07), 0 0 14px rgba(222, 181, 59, .08) !important;
+}
+.alek-inventory-toolbar [data-add]:hover { border-color: #ffe18a !important; box-shadow: 0 0 18px rgba(72, 204, 243, .17) !important; }
+.alek-inventory-grid {
+  min-height: 0 !important;
+  overflow: auto !important;
+  position: relative !important;
+  display: block !important;
+  padding: 5px !important;
+  scrollbar-gutter: stable !important;
+  contain: strict !important;
+}
+.alek-inventory-virtual-space {
+  position: relative !important;
+  width: 100% !important;
+  min-height: 100% !important;
+}
+.alek-inventory-window {
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+}
+.alek-inventory-window > .alek-item-slot {
+  position: absolute !important;
+  pointer-events: auto !important;
+}
+.alek-item-slot {
+  all: unset !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  aspect-ratio: 1 !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 11px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(85, 184, 218, .40) !important;
+  border-radius: 8px !important;
+  background: linear-gradient(135deg, rgba(226, 190, 81, .065), transparent 22%), radial-gradient(circle at 43% 33%, rgba(66, 181, 222, .14), rgba(3, 11, 17, .98) 68%) !important;
+  color: #78dcf5 !important;
+  box-shadow: inset 0 0 18px rgba(57, 173, 215, .055), 0 8px 18px rgba(0, 0, 0, .24) !important;
+  cursor: pointer !important;
+  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease, filter .15s ease !important;
+}
+.alek-item-slot::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 7px !important;
+  border: 1px solid rgba(226, 190, 81, .16) !important;
+  border-radius: 4px !important;
+  pointer-events: none !important;
+}
+.alek-item-slot:hover,
+.alek-item-slot:focus-visible {
+  transform: translateY(-2px) !important;
+  border-color: #79ddfa !important;
+  filter: brightness(1.08) !important;
+  box-shadow: 0 0 20px rgba(63, 194, 235, .17), inset 0 0 20px rgba(69, 184, 223, .08) !important;
+}
+.alek-item-slot.empty { opacity: .67 !important; border-style: solid !important; background: radial-gradient(circle, rgba(53, 153, 191, .07), #030a0f 72%) !important; }
+.alek-item-slot.empty > span { font: 800 1.8rem/1 Georgia, serif !important; color: #5dbbd5 !important; text-shadow: 0 0 12px rgba(76, 203, 238, .30) !important; }
+.alek-item-slot img { width: 100% !important; height: 100% !important; display: block !important; object-fit: contain !important; }
+.alek-item-slot.empty .alek-item-empty-moon {
+  width: 68% !important;
+  height: 68% !important;
+  border-radius: 50% !important;
+  object-fit: contain !important;
+  opacity: .44 !important;
+  filter: saturate(.92) brightness(.88) drop-shadow(0 0 9px rgba(57, 190, 238, .30)) !important;
+}
+.alek-item-slot > b {
+  position: absolute !important;
+  right: 8px !important;
+  bottom: 7px !important;
+  min-width: 22px !important;
+  height: 20px !important;
+  padding: 0 5px !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 1px solid rgba(231, 193, 79, .58) !important;
+  border-radius: 999px !important;
+  background: #030a0f !important;
+  color: #fff0bd !important;
+  font-size: .64rem !important;
+}
+.alek-item-empty-rune,
+.alek-item-preview-empty { display: grid !important; place-items: center !important; color: #69d3ef !important; font-family: Georgia, serif !important; text-shadow: 0 0 13px rgba(82, 215, 250, .36) !important; }
+.alek-item-empty-rune { width: 56% !important; height: 56% !important; font-size: 2.2rem !important; opacity: .76 !important; }
+
+.alek-inventory-modal-shade {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483500 !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 20px !important;
+  background: rgba(0, 4, 8, .88) !important;
+  backdrop-filter: blur(8px) saturate(1.1) !important;
+}
+.alek-inventory-modal {
+  width: min(540px, 94vw) !important;
+  max-height: 92vh !important;
+  display: grid !important;
+  grid-template-rows: auto minmax(0, 1fr) !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(226, 187, 67, .58) !important;
+  border-radius: 18px !important;
+  background: radial-gradient(circle at 18% 0%, rgba(47, 169, 214, .12), transparent 34%), linear-gradient(155deg, #071923, #02080d 76%) !important;
+  color: #dcebf1 !important;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, .78), 0 0 0 1px rgba(87, 205, 242, .12) !important;
+}
+.alek-inventory-modal.wide { width: min(940px, 96vw) !important; }
+.alek-inventory-modal > header {
+  min-height: 54px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  padding: 0 16px !important;
+  border-bottom: 1px solid rgba(91, 190, 223, .23) !important;
+  color: #f0dfaa !important;
+  font: 800 1rem Georgia, serif !important;
+}
+.alek-inventory-modal > header [data-close] {
+  all: unset !important;
+  box-sizing: border-box !important;
+  width: 34px !important;
+  height: 34px !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 1px solid rgba(224, 185, 75, .52) !important;
+  border-radius: 50% !important;
+  background: #07131a !important;
+  color: #efd487 !important;
+  cursor: pointer !important;
+}
+.alek-inventory-modal-body { min-height: 0 !important; overflow: auto !important; padding: 16px !important; display: grid !important; gap: 14px !important; }
+.alek-item-editor-host { min-height: 0 !important; }
+.alek-item-editor {
+  min-height: 0 !important;
+  display: grid !important;
+  grid-template-columns: 184px minmax(0, 1fr) !important;
+  grid-template-areas: "head head" "preview form" "foot foot" !important;
+  align-items: start !important;
+  gap: 16px !important;
+}
+.alek-item-editor > header { grid-area: head !important; }
+.alek-item-preview-stack {
+  grid-area: preview !important;
+  width: 184px !important;
+  min-width: 184px !important;
+  max-width: 184px !important;
+  display: grid !important;
+  grid-template-rows: 184px 40px !important;
+  gap: 11px !important;
+  align-items: start !important;
+}
+.alek-item-form { grid-area: form !important; }
+.alek-item-editor > footer { grid-area: foot !important; }
+.alek-item-editor > header,
+.alek-item-editor > footer { display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 9px !important; }
+.alek-item-editor > footer > div { display: flex !important; align-items: center !important; flex-wrap: wrap !important; gap: 9px !important; }
+.alek-item-editor button,
+.alek-inventory-modal button {
+  min-height: 38px !important;
+  padding: 0 13px !important;
+  border: 1px solid rgba(91, 176, 209, .48) !important;
+  border-radius: 9px !important;
+  background: linear-gradient(160deg, #102630, #050c12) !important;
+  color: #dcecf1 !important;
+  font-weight: 750 !important;
+  cursor: pointer !important;
+}
+.alek-item-editor button.primary,
+.alek-inventory-modal button.primary { border-color: rgba(228, 186, 66, .72) !important; color: #f2dfa0 !important; }
+.alek-item-editor button.danger { border-color: rgba(211, 85, 99, .62) !important; color: #ffb2bd !important; }
+.alek-inventory-modal button.danger { border-color: rgba(211, 85, 99, .70) !important; color: #ffb2bd !important; }
+.alek-item-editor button:disabled {
+  border-color: rgba(112, 127, 136, .26) !important;
+  background: linear-gradient(160deg, #11171b, #080b0e) !important;
+  color: #66747b !important;
+  cursor: not-allowed !important;
+  filter: grayscale(.65) !important;
+}
+.alek-disabled-action-wrap { position: relative !important; display: inline-flex !important; outline: none !important; }
+.alek-disabled-action-wrap::after {
+  content: attr(data-tooltip) !important;
+  position: absolute !important;
+  z-index: 40 !important;
+  left: 50% !important;
+  bottom: calc(100% + 10px) !important;
+  width: max-content !important;
+  max-width: 280px !important;
+  padding: 8px 10px !important;
+  border: 1px solid rgba(99, 190, 221, .48) !important;
+  border-radius: 8px !important;
+  background: rgba(3, 13, 19, .98) !important;
+  color: #a9c6d2 !important;
+  box-shadow: 0 9px 24px rgba(0, 0, 0, .55) !important;
+  font-size: .68rem !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+  white-space: normal !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  transform: translate(-50%, 4px) !important;
+  transition: opacity .15s ease, transform .15s ease !important;
+}
+.alek-disabled-action-wrap:hover::after,
+.alek-disabled-action-wrap:focus::after,
+.alek-disabled-action-wrap:focus-within::after { opacity: 1 !important; transform: translate(-50%, 0) !important; }
+.alek-discard-confirm { display: grid !important; justify-items: center !important; gap: 8px !important; padding: 8px 6px 2px !important; text-align: center !important; }
+.alek-discard-confirm > span { width: 50px !important; height: 50px !important; display: grid !important; place-items: center !important; border: 1px solid rgba(216, 82, 99, .62) !important; border-radius: 50% !important; background: radial-gradient(circle, rgba(172, 40, 60, .20), #070b10 72%) !important; color: #ff9fac !important; font-size: 1.8rem !important; }
+.alek-discard-confirm > strong { color: #f2d99c !important; font: 900 1.06rem Georgia, serif !important; }
+.alek-discard-confirm > p { max-width: 440px !important; margin: 0 !important; color: #9eb4be !important; line-height: 1.55 !important; }
+.alek-item-preview {
+  width: 184px !important;
+  height: 184px !important;
+  padding: 12px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  border: 1px solid rgba(91, 195, 229, .38) !important;
+  border-radius: 17px !important;
+  background: radial-gradient(circle, rgba(49, 154, 194, .10), #02080d 72%) !important;
+  box-shadow: inset 0 0 18px rgba(62, 183, 221, .06) !important;
+}
+.alek-item-preview img,
+.alek-item-preview-empty { width: 100% !important; height: 100% !important; object-fit: contain !important; }
+.alek-item-preview-empty { font-size: 3.2rem !important; }
+.alek-item-form { display: grid !important; grid-template-columns: minmax(0, 1fr) 130px !important; gap: 12px !important; }
+.alek-item-form label,
+.alek-inventory-field,
+.alek-trade-qty label { display: grid !important; gap: 7px !important; color: #d6c17e !important; font-size: .74rem !important; }
+.alek-item-form .wide { grid-column: 1 / -1 !important; }
+.alek-item-form input,
+.alek-item-form select,
+.alek-item-form textarea,
+.alek-inventory-field input,
+.alek-inventory-field select,
+.alek-trade-qty input {
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  padding: 10px !important;
+  border: 1px solid rgba(83, 155, 184, .52) !important;
+  border-radius: 9px !important;
+  background: #040d13 !important;
+  color: #edf7fa !important;
+  outline: none !important;
+}
+.alek-item-form input:focus,
+.alek-item-form select:focus,
+.alek-item-form textarea:focus { border-color: #72daf5 !important; box-shadow: 0 0 0 3px rgba(70, 190, 228, .10) !important; }
+.alek-item-form textarea { min-height: 135px !important; resize: vertical !important; }
+.alek-item-form input[type="file"] { padding: 7px !important; }
+.alek-item-form input[type="file"]::file-selector-button {
+  margin-right: 10px !important;
+  padding: 7px 10px !important;
+  border: 1px solid rgba(224, 183, 68, .55) !important;
+  border-radius: 7px !important;
+  background: #10232c !important;
+  color: #ead99f !important;
+  cursor: pointer !important;
+}
+.alek-item-type-row { display: grid !important; grid-template-columns: 62px minmax(0, 1fr) !important; gap: 9px !important; }
+.alek-inventory-modal-actions,
+.alek-crop-actions { display: flex !important; justify-content: flex-end !important; gap: 9px !important; }
+.alek-crop-stage { display: grid !important; gap: 14px !important; }
+.alek-crop-viewport { width: min(480px, 72vw) !important; aspect-ratio: 1 !important; margin: auto !important; position: relative !important; overflow: hidden !important; border: 1px solid rgba(226, 187, 70, .64) !important; border-radius: 15px !important; background: #02070b !important; touch-action: none !important; }
+.alek-crop-viewport img { position: absolute !important; left: 50% !important; top: 50% !important; transform-origin: center center !important; max-width: none !important; max-height: none !important; user-select: none !important; pointer-events: none !important; }
+.alek-trade-head { display: grid !important; grid-template-columns: 1fr auto 1fr !important; align-items: center !important; gap: 12px !important; text-align: center !important; color: #efdfb0 !important; font: 800 .94rem Georgia, serif !important; }
+.alek-trade-bags { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+.alek-mini-bag { min-height: 210px !important; padding: 9px !important; display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 7px !important; align-content: start !important; border: 1px solid rgba(76, 166, 199, .32) !important; border-radius: 13px !important; background: #030b10 !important; }
+.alek-mini-slot { position: relative !important; aspect-ratio: 1 !important; padding: 6px !important; border: 1px solid rgba(81, 161, 191, .42) !important; border-radius: 9px !important; background: #061017 !important; color: #dcecf2 !important; }
+.alek-mini-slot img { width: 100% !important; height: 100% !important; object-fit: contain !important; }
+.alek-mini-slot b { position: absolute !important; right: 4px !important; bottom: 3px !important; }
+.alek-mini-slot.selected { border-color: #72dcff !important; box-shadow: 0 0 16px rgba(75, 200, 240, .22) !important; }
+.alek-trade-qty { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+
+@media (max-width: 1180px) {
+  #alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail { grid-template-columns: 176px minmax(0, 1fr) !important; }
+  #alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail { width: 176px !important; min-width: 176px !important; max-width: 176px !important; grid-template-columns: repeat(4, 44px) !important; }
+  #alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail > .vertical-resource { width: 44px !important; min-width: 44px !important; max-width: 44px !important; }
+  .alek-stat-modal-overlay .alek-stat-modal-body { grid-template-columns: minmax(560px, 1fr) 340px !important; gap: 10px !important; }
+}
+@media (max-width: 900px) {
+  .alek-stat-modal-overlay { overflow: auto !important; place-items: start center !important; }
+  .alek-stat-modal-overlay .alek-stat-modal { height: auto !important; min-height: calc(100dvh - 20px) !important; overflow: visible !important; }
+  .alek-stat-modal-overlay .alek-stat-modal-body { grid-template-columns: 1fr !important; overflow: visible !important; }
+  .alek-stat-modal-overlay .alek-stat-wheel-shell { min-height: 670px !important; }
+  .alek-stat-modal-overlay .alek-stat-detail-panel { overflow: visible !important; }
+}
+@media (max-width: 680px) {
+  .alek-stat-modal-overlay .alek-stat-wheel-shell { min-height: 540px !important; }
+  .alek-stat-modal-overlay .r23-stat-quadrant-labels text { font-size: 27px !important; }
+  .alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70 { min-width: 43px !important; }
+  .alek-item-editor { grid-template-columns: 1fr !important; grid-template-areas: "head" "preview" "form" "foot" !important; }
+  .alek-item-preview-stack { margin: auto !important; }
+  .alek-item-form { grid-template-columns: 1fr !important; }
+  .alek-item-form .wide { grid-column: 1 !important; }
+}
+
+/* --------------------------------------------------------------------------
+   R38 · ESKİ TÜMLEŞİK STAT DAİRESİ GÖRÜNÜMÜ + YENİ 24-STAT MANTIĞI
+   -------------------------------------------------------------------------- */
+.alek-stat-modal-overlay .alek-stat-modal {
+  width: calc(100vw - 20px) !important;
+  height: calc(100dvh - 20px) !important;
+  max-width: 1900px !important;
+  max-height: 1060px !important;
+  border-color: rgba(83, 112, 126, .34) !important;
+  border-radius: 28px !important;
+  background: #01070b !important;
+  box-shadow: 0 0 0 1px rgba(223, 184, 62, .08), 0 32px 110px rgba(0, 0, 0, .88) !important;
+}
+.alek-stat-modal-overlay .alek-stat-modal-body {
+  grid-template-columns: clamp(225px, 15vw, 285px) minmax(560px, 1fr) clamp(330px, 21vw, 400px) !important;
+  gap: 14px !important;
+  padding: 16px 18px 10px !important;
+}
+.alek-stat-modal-overlay .alek-stat-close {
+  all: unset !important;
+  box-sizing: border-box !important;
+  position: absolute !important;
+  right: 14px !important;
+  top: 13px !important;
+  z-index: 80 !important;
+  width: 52px !important;
+  height: 52px !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 1px solid rgba(224, 185, 73, .36) !important;
+  border-radius: 50% !important;
+  background: radial-gradient(circle at 35% 28%, #17212a, #071016 72%) !important;
+  color: #f3d89a !important;
+  font: 700 2rem/1 Georgia, serif !important;
+  cursor: pointer !important;
+  box-shadow: inset 0 0 18px rgba(218, 181, 72, .05), 0 8px 24px rgba(0, 0, 0, .45) !important;
+}
+.alek-stat-modal-overlay .alek-stat-close:hover,
+.alek-stat-modal-overlay .alek-stat-close:focus-visible {
+  border-color: #f1d17d !important;
+  color: #fff2c8 !important;
+  box-shadow: 0 0 22px rgba(228, 188, 72, .18) !important;
+}
+.alek-stat-guide-panel {
+  min-width: 0 !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  padding: 22px 0 12px 4px !important;
+  overflow: auto !important;
+  color: #d9e1e5 !important;
+  scrollbar-width: thin !important;
+}
+.alek-stat-guide-brand { display: grid !important; gap: 13px !important; }
+.alek-stat-guide-brand > small {
+  color: #e5e9ec !important;
+  font: 700 .72rem/1 Georgia, serif !important;
+  letter-spacing: .025em !important;
+}
+.alek-stat-guide-brand h2 {
+  margin: 3px 0 9px !important;
+  color: #f1f0ec !important;
+  font: 800 clamp(1.55rem, 1.9vw, 2rem)/1.05 Georgia, serif !important;
+  text-shadow: 0 2px 16px rgba(218, 186, 101, .10) !important;
+}
+.alek-stat-guide-brand p {
+  margin: 0 !important;
+  max-width: 255px !important;
+  color: #d7dcdf !important;
+  font: 700 clamp(.82rem, .9vw, 1rem)/1.34 Georgia, serif !important;
+}
+.alek-stat-guide-steps { display: grid !important; gap: 10px !important; }
+.alek-stat-guide-steps article {
+  display: grid !important;
+  gap: 5px !important;
+  padding: 12px 12px 13px !important;
+  border-left: 2px solid rgba(206, 122, 246, .55) !important;
+  background: linear-gradient(90deg, rgba(55, 25, 78, .32), rgba(7, 11, 20, .30)) !important;
+}
+.alek-stat-guide-steps article:nth-child(2) { border-left-color: rgba(226, 190, 75, .58) !important; }
+.alek-stat-guide-steps article:nth-child(3) { border-left-color: rgba(68, 209, 225, .58) !important; }
+.alek-stat-guide-steps small {
+  color: #c88ced !important;
+  font: 750 .56rem/1 ui-monospace, Consolas, monospace !important;
+  letter-spacing: .15em !important;
+}
+.alek-stat-guide-steps article:nth-child(2) small { color: #e5c868 !important; }
+.alek-stat-guide-steps article:nth-child(3) small { color: #69d6e8 !important; }
+.alek-stat-guide-steps strong { color: #eee8f2 !important; font: 800 .91rem/1.15 Georgia, serif !important; }
+.alek-stat-guide-steps span { color: #99aab3 !important; font: 500 .67rem/1.42 Georgia, serif !important; }
+.alek-stat-guide-seal {
+  margin-top: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 8px 0 !important;
+  color: #e5ce8e !important;
+}
+.alek-stat-guide-seal > i {
+  width: 48px !important;
+  height: 48px !important;
+  flex: 0 0 48px !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 1px solid rgba(222, 183, 66, .38) !important;
+  border-radius: 50% !important;
+  background: #061017 !important;
+  font: normal 1.2rem Georgia, serif !important;
+}
+.alek-stat-guide-seal > span { display: grid !important; gap: 3px !important; }
+.alek-stat-guide-seal strong { font: 800 .86rem/1.1 Georgia, serif !important; }
+.alek-stat-guide-seal small { color: #738b98 !important; font-size: .57rem !important; }
+.alek-stat-modal-overlay .alek-stat-wheel-shell {
+  border-color: rgba(67, 101, 116, .24) !important;
+  border-radius: 22px !important;
+  background: radial-gradient(circle at 50% 48%, rgba(10, 61, 83, .10), #01070b 76%) !important;
+  padding: 7px 6px 3px !important;
+}
+.alek-stat-modal-overlay .alek-stat-wheel {
+  width: var(--alek-stat-wheel-size, min(100%, 950px)) !important;
+  max-width: 100% !important;
+  background: transparent !important;
+}
+.alek-stat-modal-overlay .r23-stat-quadrant-labels text {
+  font-size: 36px !important;
+  letter-spacing: .01em !important;
+  stroke-width: 8px !important;
+}
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70 {
+  width: 7.35% !important;
+  min-width: 48px !important;
+  max-width: 72px !important;
+  border-width: 1px !important;
+  border-color: color-mix(in srgb, var(--tax-symbol) 62%, #d9b85d) !important;
+  background: radial-gradient(circle at 37% 28%, color-mix(in srgb, var(--tax-symbol) 42%, #7f5b35), color-mix(in srgb, var(--tax-symbol) 16%, #19100a) 44%, #05080b 79%) !important;
+  box-shadow: 0 7px 17px rgba(0, 0, 0, .56), inset 0 0 0 2px rgba(5, 8, 11, .94), inset 0 0 0 4px color-mix(in srgb, var(--tax-symbol) 22%, #b6903f), 0 0 15px color-mix(in srgb, var(--tax-symbol) 30%, transparent) !important;
+}
+.alek-stat-modal-overlay .alek-stat-node .taxonomy-node-symbol.alek-stat-sigil {
+  width: 58% !important;
+  height: 58% !important;
+}
+.alek-stat-modal-overlay .alek-stat-node .alek-stat-rune-svg,
+.alek-stat-modal-overlay .selected-sigil .alek-stat-rune-svg {
+  stroke-width: 1.62 !important;
+  filter: drop-shadow(0 0 3px currentColor) drop-shadow(0 0 7px color-mix(in srgb, currentColor 50%, transparent)) !important;
+}
+.alek-stat-modal-overlay .alek-stat-node .alek-stat-rune-svg .taxonomy-sigil-core,
+.alek-stat-modal-overlay .selected-sigil .alek-stat-rune-svg .taxonomy-sigil-core {
+  fill: none !important;
+  stroke: currentColor !important;
+}
+.alek-stat-modal-overlay .alek-stat-detail-panel {
+  margin-top: 154px !important;
+  margin-bottom: 112px !important;
+  align-self: stretch !important;
+  padding: 24px 18px 18px !important;
+  border-color: rgba(207, 108, 153, .66) !important;
+  border-radius: 32px 10px 32px 10px !important;
+  background: radial-gradient(circle at 23% 2%, rgba(112, 49, 130, .18), transparent 34%), linear-gradient(155deg, #17172b, #070d17 66%, #050b12) !important;
+  box-shadow: inset 0 0 0 1px rgba(246, 194, 92, .05), 0 20px 50px rgba(0, 0, 0, .44) !important;
+}
+.alek-stat-detail-ornament {
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 4px auto 14px !important;
+  color: #e759d5 !important;
+}
+.alek-stat-detail-ornament span { height: 1px !important; background: linear-gradient(90deg, transparent, currentColor) !important; }
+.alek-stat-detail-ornament span:last-child { background: linear-gradient(90deg, currentColor, transparent) !important; }
+.alek-stat-detail-ornament i { font: normal .82rem/1 Georgia, serif !important; text-shadow: 0 0 9px currentColor !important; }
+.alek-stat-detail-ornament.bottom { margin: 13px auto 0 !important; }
+.alek-stat-modal-overlay .alek-stat-selected-head {
+  display: grid !important;
+  justify-items: center !important;
+  gap: 8px !important;
+  padding: 0 0 14px !important;
+  text-align: center !important;
+  border-bottom: 1px solid rgba(132, 150, 161, .20) !important;
+}
+.alek-stat-modal-overlay .selected-sigil {
+  width: 62px !important;
+  height: 62px !important;
+  flex: none !important;
+  color: #f06bdb !important;
+  filter: drop-shadow(0 0 11px rgba(239, 77, 213, .48)) !important;
+}
+.alek-stat-modal-overlay .alek-stat-selected-head small {
+  color: #e47ed0 !important;
+  font: 750 .58rem/1 ui-monospace, Consolas, monospace !important;
+  letter-spacing: .22em !important;
+}
+.alek-stat-modal-overlay .alek-stat-selected-head h3 {
+  margin: 6px 0 0 !important;
+  color: #f1e5c5 !important;
+  font: 800 clamp(1.45rem, 1.8vw, 2rem)/1 Georgia, serif !important;
+}
+.alek-stat-modal-overlay .alek-stat-path { grid-template-columns: repeat(4, 1fr) !important; }
+.alek-stat-modal-overlay .alek-stat-path span { min-width: 0 !important; padding: 5px 4px !important; text-align: center !important; }
+.alek-stat-modal-overlay .alek-stat-description {
+  min-height: auto !important;
+  margin: 12px 0 !important;
+  color: #b8c3ca !important;
+  font: 700 italic .78rem/1.45 Georgia, serif !important;
+  text-align: center !important;
+}
+.alek-stat-modal-overlay .alek-stat-value-editor { margin-top: 8px !important; }
+.alek-stat-modal-overlay .alek-stat-scale-note { margin-bottom: 0 !important; }
+.alek-stat-modal-overlay .alek-custom-stat-panel { margin-top: 12px !important; }
+.alek-stat-modal-overlay .alek-stat-modal-footer {
+  min-height: 54px !important;
+  padding: 8px 18px !important;
+  background: rgba(2, 10, 15, .98) !important;
+}
+
+@media (max-width: 1500px) {
+  .alek-stat-modal-overlay .alek-stat-modal-body {
+    grid-template-columns: 220px minmax(520px, 1fr) 345px !important;
+    gap: 10px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  .alek-stat-guide-panel { padding-left: 0 !important; }
+  .alek-stat-modal-overlay .alek-stat-detail-panel { margin-top: 118px !important; margin-bottom: 84px !important; }
+}
+@media (max-width: 1240px) {
+  .alek-stat-modal-overlay .alek-stat-modal-body { grid-template-columns: minmax(540px, 1fr) 340px !important; }
+  .alek-stat-guide-panel { display: none !important; }
+  .alek-stat-modal-overlay .alek-stat-detail-panel { margin-top: 72px !important; margin-bottom: 56px !important; }
+}
+@media (max-width: 900px) {
+  .alek-stat-modal-overlay .alek-stat-modal-body { grid-template-columns: 1fr !important; }
+  .alek-stat-guide-panel { display: flex !important; max-height: none !important; padding: 12px 6px !important; }
+  .alek-stat-guide-seal { margin-top: 0 !important; }
+  .alek-stat-modal-overlay .alek-stat-detail-panel { margin: 0 !important; }
+  .alek-stat-modal-overlay .alek-stat-close { width: 42px !important; height: 42px !important; font-size: 1.55rem !important; }
+}
+
+/* --------------------------------------------------------------------------
+   R39 · TÜMLEŞİK REFERANSTAKİ SAKİN RENK / MÜHÜR STİLİ
+   -------------------------------------------------------------------------- */
+.alek-stat-modal-overlay {
+  background: radial-gradient(circle at 50% 48%, rgba(16, 35, 55, .18), rgba(2, 5, 9, .86) 72%) !important;
+  backdrop-filter: blur(3px) !important;
+}
+.alek-stat-modal-overlay .alek-stat-modal {
+  border: 1px solid rgba(92, 119, 145, .22) !important;
+  border-radius: 24px !important;
+  background: radial-gradient(circle at 50% 48%, rgba(8, 17, 28, .99), rgba(2, 5, 9, .998)) !important;
+  box-shadow: 0 28px 72px rgba(0, 0, 0, .54), inset 0 0 0 1px rgba(255, 255, 255, .025) !important;
+}
+.alek-stat-modal-overlay .alek-stat-close {
+  right: 12px !important;
+  top: 10px !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-color: rgba(179, 148, 80, .38) !important;
+  background: linear-gradient(180deg, rgba(16, 24, 33, .98), rgba(7, 10, 15, .99)) !important;
+  color: #f1dda8 !important;
+  font-size: 1.55rem !important;
+}
+.alek-stat-guide-panel { padding: 12px 4px 2px 2px !important; }
+.alek-stat-guide-brand > small { color: #d8e0e6 !important; font-size: .68rem !important; }
+.alek-stat-guide-brand h2 { color: #f0f0ec !important; font-size: clamp(1.45rem, 1.75vw, 1.8rem) !important; }
+.alek-stat-guide-brand p { color: #c6d0d6 !important; font-size: clamp(.76rem, .82vw, .9rem) !important; }
+.alek-stat-guide-steps article {
+  padding: 10px 11px !important;
+  border-left-color: rgba(176, 122, 233, .45) !important;
+  background: linear-gradient(90deg, rgba(38, 20, 54, .45), transparent) !important;
+}
+.alek-stat-guide-steps article:nth-child(2) { border-left-color: rgba(197, 166, 90, .45) !important; background: linear-gradient(90deg, rgba(52, 39, 17, .38), transparent) !important; }
+.alek-stat-guide-steps article:nth-child(3) { border-left-color: rgba(74, 178, 196, .43) !important; background: linear-gradient(90deg, rgba(13, 47, 54, .36), transparent) !important; }
+.alek-stat-guide-steps span { color: #8fa3b1 !important; }
+.alek-stat-modal-overlay .alek-stat-wheel-shell {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.alek-stat-modal-overlay .r23-stat-quadrant-labels { z-index: 10 !important; opacity: 1 !important; }
+.alek-stat-modal-overlay .r23-stat-quadrant-labels text {
+  font: 800 27px/1 Georgia, serif !important;
+  letter-spacing: .2px !important;
+  paint-order: stroke fill !important;
+  stroke: rgba(0, 0, 0, .58) !important;
+  stroke-width: 3px !important;
+  stroke-linejoin: round !important;
+  filter: none !important;
+}
+.alek-stat-modal-overlay .r23-stat-quadrant-labels .q-northwest { fill: #f0e4ff !important; stroke: rgba(0, 0, 0, .58) !important; filter: none !important; }
+.alek-stat-modal-overlay .r23-stat-quadrant-labels .q-northeast { fill: #f3e0b3 !important; stroke: rgba(0, 0, 0, .58) !important; filter: none !important; }
+.alek-stat-modal-overlay .r23-stat-quadrant-labels .q-southeast { fill: #d9e4ff !important; stroke: rgba(0, 0, 0, .58) !important; filter: none !important; }
+.alek-stat-modal-overlay .r23-stat-quadrant-labels .q-southwest { fill: #d1fdff !important; stroke: rgba(0, 0, 0, .58) !important; filter: none !important; }
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70 {
+  width: 5.72% !important;
+  min-width: 46px !important;
+  max-width: 56px !important;
+  border: 1px solid rgba(239, 195, 91, .88) !important;
+  background: radial-gradient(circle at 36% 28%, color-mix(in srgb, var(--tax-symbol) 34%, #211407), rgba(4, 7, 12, .99) 70%) !important;
+  box-shadow: 0 9px 20px rgba(0, 0, 0, .52), inset 0 0 0 2px #100c08, inset 0 0 0 4px rgba(235, 190, 79, .25), 0 0 16px color-mix(in srgb, var(--tax-symbol) 29%, transparent) !important;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease, opacity .18s ease, filter .18s ease !important;
+}
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 3px !important;
+  border: 1px solid rgba(255, 222, 133, .72) !important;
+  border-radius: 50% !important;
+  background: conic-gradient(from calc(var(--tax-angle) * 1deg), color-mix(in srgb, var(--tax-from) 38%, transparent), color-mix(in srgb, var(--tax-symbol) 9%, transparent) 38%, color-mix(in srgb, var(--tax-to) 34%, transparent) 72%, color-mix(in srgb, var(--tax-from) 38%, transparent)) !important;
+  pointer-events: none !important;
+}
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70::after,
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70:hover::after,
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70:focus-visible::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 7px !important;
+  left: 7px !important;
+  top: 7px !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  border: 1px solid color-mix(in srgb, var(--tax-symbol) 62%, transparent) !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  box-shadow: inset 0 0 12px color-mix(in srgb, var(--tax-symbol) 28%, transparent), 0 0 8px color-mix(in srgb, var(--tax-symbol) 24%, transparent) !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  pointer-events: none !important;
+}
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70:hover,
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70.selected {
+  transform: translate(-50%, -50%) scale(1.14) !important;
+  border-color: #ffe29a !important;
+  box-shadow: 0 13px 30px rgba(0, 0, 0, .48), 0 0 28px color-mix(in srgb, var(--tax-symbol) 48%, transparent), inset 0 0 0 1px rgba(255, 255, 255, .1) !important;
+}
+.alek-stat-modal-overlay .alek-stat-node .taxonomy-node-symbol.alek-stat-sigil {
+  width: 60.7% !important;
+  height: 60.7% !important;
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--tax-symbol) 90%, transparent)) drop-shadow(0 0 10px color-mix(in srgb, var(--tax-symbol) 38%, transparent)) !important;
+}
+.alek-stat-modal-overlay .alek-stat-node .alek-stat-rune-svg {
+  filter: none !important;
+}
+.alek-stat-modal-overlay .alek-stat-node .alek-stat-value {
+  right: -1px !important;
+  bottom: -1px !important;
+  min-width: 16px !important;
+  width: auto !important;
+  height: 16px !important;
+  padding: 0 3px !important;
+  border-color: color-mix(in srgb, var(--tax-symbol) 58%, transparent) !important;
+  background: #050c13 !important;
+  color: var(--tax-symbol) !important;
+  font-size: .48rem !important;
+  box-shadow: 0 0 9px color-mix(in srgb, var(--tax-symbol) 34%, transparent) !important;
+}
+.alek-stat-modal-overlay .alek-stat-detail-panel {
+  --alek-stat-accent: #f04fff;
+  border: 1px solid color-mix(in srgb, var(--alek-stat-accent) 32%, #8a713c) !important;
+  border-radius: 26px 9px 26px 9px !important;
+  background: radial-gradient(circle at 50% 5%, color-mix(in srgb, var(--alek-stat-accent) 13%, transparent), transparent 34%), linear-gradient(165deg, rgba(12, 24, 34, .97), rgba(3, 7, 12, .99) 68%) !important;
+  box-shadow: 0 24px 58px rgba(0, 0, 0, .46), inset 0 0 0 1px rgba(255, 231, 166, .055), inset 0 0 38px color-mix(in srgb, var(--alek-stat-accent) 6%, transparent) !important;
+}
+.alek-stat-detail-ornament { color: var(--alek-stat-accent) !important; }
+.alek-stat-modal-overlay .selected-sigil {
+  color: var(--alek-stat-accent) !important;
+  filter: drop-shadow(0 0 11px color-mix(in srgb, var(--alek-stat-accent) 56%, transparent)) !important;
+}
+.alek-stat-modal-overlay .alek-stat-selected-head small { color: color-mix(in srgb, var(--alek-stat-accent) 76%, #e6cf98) !important; }
+.alek-stat-modal-overlay .alek-stat-selected-head h3 {
+  color: #fff3d1 !important;
+  text-shadow: 0 0 15px color-mix(in srgb, var(--alek-stat-accent) 35%, transparent) !important;
+}
+.alek-stat-modal-overlay .alek-stat-value-editor,
+.alek-stat-modal-overlay .alek-stat-path span {
+  border-color: color-mix(in srgb, var(--alek-stat-accent) 24%, #526a77) !important;
+  background: color-mix(in srgb, var(--alek-stat-accent) 5%, rgba(5, 13, 19, .94)) !important;
+}
+.alek-stat-modal-overlay .alek-stat-axis-legend {
+  border: 1px solid rgba(105, 137, 163, .14) !important;
+  border-radius: 999px !important;
+  background: rgba(5, 10, 16, .82) !important;
+}
+.alek-stat-modal-overlay .alek-stat-axis-legend span {
+  border-color: rgba(105, 137, 163, .18) !important;
+  background: rgba(6, 13, 19, .62) !important;
+}
+
+/* --------------------------------------------------------------------------
+   R40 · SAĞ BİLGİ MÜHRÜ SEÇİLİ RÜNÜN RENGİNİ BÜTÜN YÜZEYE TAŞIR
+   color-mix desteğine bağlı değildir; RGB değişkeni seçim sırasında JS'den gelir.
+   -------------------------------------------------------------------------- */
+.alek-stat-modal-overlay .alek-stat-detail-panel {
+  --alek-stat-accent-rgb: 240, 79, 255;
+  border-color: rgba(var(--alek-stat-accent-rgb), .72) !important;
+  background:
+    radial-gradient(circle at 50% 3%, rgba(var(--alek-stat-accent-rgb), .21), transparent 34%),
+    linear-gradient(145deg, rgba(var(--alek-stat-accent-rgb), .075), rgba(7, 13, 22, .985) 43%, rgba(2, 7, 12, .995) 100%) !important;
+  box-shadow:
+    0 24px 58px rgba(0, 0, 0, .48),
+    inset 0 0 0 1px rgba(var(--alek-stat-accent-rgb), .16),
+    inset 0 0 48px rgba(var(--alek-stat-accent-rgb), .10),
+    0 0 24px rgba(var(--alek-stat-accent-rgb), .13) !important;
+  scrollbar-color: rgba(var(--alek-stat-accent-rgb), .58) rgba(2, 8, 13, .82) !important;
+}
+.alek-stat-modal-overlay .alek-stat-detail-panel::-webkit-scrollbar-thumb {
+  border: 2px solid rgba(2, 8, 13, .92) !important;
+  border-radius: 999px !important;
+  background: rgba(var(--alek-stat-accent-rgb), .58) !important;
+}
+.alek-stat-modal-overlay .alek-stat-detail-ornament { color: rgb(var(--alek-stat-accent-rgb)) !important; }
+.alek-stat-modal-overlay .alek-stat-selected-head {
+  border-bottom-color: rgba(var(--alek-stat-accent-rgb), .32) !important;
+}
+.alek-stat-modal-overlay .selected-sigil {
+  border-color: rgba(var(--alek-stat-accent-rgb), .74) !important;
+  background: radial-gradient(circle, rgba(var(--alek-stat-accent-rgb), .22), rgba(var(--alek-stat-accent-rgb), .045) 64%, rgba(3, 9, 15, .94)) !important;
+  color: rgb(var(--alek-stat-accent-rgb)) !important;
+  box-shadow: inset 0 0 18px rgba(var(--alek-stat-accent-rgb), .16), 0 0 20px rgba(var(--alek-stat-accent-rgb), .26) !important;
+  filter: drop-shadow(0 0 11px rgba(var(--alek-stat-accent-rgb), .62)) !important;
+}
+.alek-stat-modal-overlay .alek-stat-selected-head small,
+.alek-stat-modal-overlay .alek-stat-path b,
+.alek-stat-modal-overlay .alek-stat-value-editor > span,
+.alek-stat-modal-overlay .alek-custom-stat-head h4 {
+  color: rgb(var(--alek-stat-accent-rgb)) !important;
+  text-shadow: 0 0 10px rgba(var(--alek-stat-accent-rgb), .28) !important;
+}
+.alek-stat-modal-overlay .alek-stat-selected-head h3 {
+  text-shadow: 0 0 17px rgba(var(--alek-stat-accent-rgb), .45) !important;
+}
+.alek-stat-modal-overlay .alek-stat-description {
+  color: rgba(var(--alek-stat-accent-rgb), .82) !important;
+}
+.alek-stat-modal-overlay .alek-stat-path span,
+.alek-stat-modal-overlay .alek-stat-value-editor {
+  border-color: rgba(var(--alek-stat-accent-rgb), .38) !important;
+  background: rgba(var(--alek-stat-accent-rgb), .075) !important;
+  box-shadow: inset 0 0 18px rgba(var(--alek-stat-accent-rgb), .04) !important;
+}
+.alek-stat-modal-overlay .alek-stat-value-editor input,
+.alek-stat-modal-overlay .alek-custom-stat-row input {
+  border-color: rgba(var(--alek-stat-accent-rgb), .48) !important;
+  background: rgba(2, 8, 13, .94) !important;
+  box-shadow: inset 0 0 12px rgba(var(--alek-stat-accent-rgb), .05) !important;
+}
+.alek-stat-modal-overlay .alek-stat-value-editor input:focus,
+.alek-stat-modal-overlay .alek-custom-stat-row input:focus {
+  border-color: rgb(var(--alek-stat-accent-rgb)) !important;
+  outline: 1px solid rgba(var(--alek-stat-accent-rgb), .28) !important;
+  box-shadow: 0 0 14px rgba(var(--alek-stat-accent-rgb), .22) !important;
+}
+.alek-stat-modal-overlay .alek-custom-stat-panel {
+  border-top-color: rgba(var(--alek-stat-accent-rgb), .28) !important;
+}
+.alek-stat-modal-overlay .alek-add-custom-stat {
+  border-color: rgba(var(--alek-stat-accent-rgb), .62) !important;
+  background: rgba(var(--alek-stat-accent-rgb), .12) !important;
+  color: rgb(var(--alek-stat-accent-rgb)) !important;
+}
+.alek-stat-modal-overlay .alek-custom-stat-empty {
+  border-color: rgba(var(--alek-stat-accent-rgb), .30) !important;
+  color: rgba(var(--alek-stat-accent-rgb), .66) !important;
+}
+
+/* R47 · Son kural geometrisi. "height:auto" rünleri dikey elipse çeviriyordu.
+   Hem teker hem 24 düğüm fiziksel olarak kare tutulur; hiçbir geç kural ezemez. */
+.alek-stat-modal-overlay .alek-stat-wheel {
+  width: var(--alek-stat-wheel-size, min(100%, 920px)) !important;
+  height: var(--alek-stat-wheel-size, min(100%, 920px)) !important;
+  inline-size: var(--alek-stat-wheel-size, min(100%, 920px)) !important;
+  block-size: var(--alek-stat-wheel-size, min(100%, 920px)) !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+  aspect-ratio: 1 / 1 !important;
+  flex: 0 0 var(--alek-stat-wheel-size, min(100%, 920px)) !important;
+  box-sizing: border-box !important;
+}
+.alek-stat-modal-overlay .alek-stat-wheel > .taxonomy-layer-stack,
+.alek-stat-modal-overlay .alek-stat-wheel > .r21-stat-taxonomy-frame,
+.alek-stat-modal-overlay .alek-stat-wheel > .r23-stat-quadrant-labels {
+  width: 100% !important;
+  height: 100% !important;
+  inline-size: 100% !important;
+  block-size: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+}
+.alek-stat-modal-overlay .alek-stat-node.taxonomy-node-r70 {
+  --alek-stat-node-size: 56px;
+  width: var(--alek-stat-node-size) !important;
+  height: var(--alek-stat-node-size) !important;
+  inline-size: var(--alek-stat-node-size) !important;
+  block-size: var(--alek-stat-node-size) !important;
+  min-width: var(--alek-stat-node-size) !important;
+  min-height: var(--alek-stat-node-size) !important;
+  max-width: var(--alek-stat-node-size) !important;
+  max-height: var(--alek-stat-node-size) !important;
+  aspect-ratio: 1 / 1 !important;
+  flex: 0 0 var(--alek-stat-node-size) !important;
+  border-radius: 50% !important;
+  box-sizing: border-box !important;
+}
+
+/* R49 FINAL · yükleme sırasından bağımsız temaslı ray ve sanal slot sözleşmesi. */
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail { grid-template-columns: 173px minmax(0, 1fr) !important; column-gap: 0 !important; gap: 0 !important; }
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail { width: 173px !important; min-width: 173px !important; max-width: 173px !important; display: flex !important; flex-flow: row nowrap !important; align-items: stretch !important; justify-content: flex-start !important; gap: 0 !important; padding: 0 !important; margin: 0 !important; overflow: visible !important; }
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail > .vertical-resource { flex: 0 0 44px !important; width: 44px !important; min-width: 44px !important; max-width: 44px !important; margin: 0 !important; border-width: 1px !important; border-radius: 0 !important; opacity: 1 !important; filter: none !important; }
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail > .vertical-resource + .vertical-resource { margin-left: -1px !important; border-left-width: 1px !important; }
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-heading strong { width: 42px !important; max-width: 42px !important; font-size: .38rem !important; letter-spacing: -.08em !important; text-overflow: clip !important; }
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .character-detail-content { min-width: 0 !important; width: auto !important; margin-left: -1px !important; border-left: 1px solid rgba(105, 161, 184, .46) !important; }
+#alekLegacyMainPanel .alek-inventory-window > .alek-item-slot { position: absolute !important; left: var(--slot-left, 0) !important; top: var(--slot-top, 0) !important; width: var(--slot-size, 72px) !important; height: var(--slot-size, 72px) !important; min-width: 0 !important; aspect-ratio: 1 / 1 !important; pointer-events: auto !important; margin: 0 !important; }
+#alekLegacyMainPanel .alek-item-slot.empty { opacity: .82 !important; background: linear-gradient(135deg, rgba(226, 190, 81, .035), transparent 25%), radial-gradient(circle at 50% 46%, rgba(57, 172, 213, .055), #02090e 72%) !important; }
+#alekLegacyMainPanel .alek-empty-slot-seal { position: relative !important; width: 34% !important; height: 34% !important; display: block !important; transform: rotate(45deg) !important; border: 1px solid rgba(91, 205, 237, .58) !important; box-shadow: 0 0 13px rgba(75, 196, 232, .12), inset 0 0 9px rgba(231, 193, 79, .04) !important; }
+#alekLegacyMainPanel .alek-empty-slot-seal::before, #alekLegacyMainPanel .alek-empty-slot-seal::after, #alekLegacyMainPanel .alek-empty-slot-seal i { content: "" !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; border: 1px solid rgba(226, 190, 81, .34) !important; }
+#alekLegacyMainPanel .alek-empty-slot-seal::before { width: 58% !important; height: 58% !important; }
+#alekLegacyMainPanel .alek-empty-slot-seal::after { width: 8% !important; height: 8% !important; background: #75dcf7 !important; box-shadow: 0 0 8px rgba(82, 211, 245, .75) !important; }
+#alekLegacyMainPanel .alek-empty-slot-seal i { width: 132% !important; height: 1px !important; border-width: 1px 0 0 !important; transform: translate(-50%, -50%) rotate(-45deg) !important; opacity: .35 !important; }
+
+/* R50 FINAL · stat yazıları, düz seviye sınırı ve tek kart geometrisi. */
+.alek-stat-modal-overlay .alek-stat-wheel > .r23-stat-quadrant-labels { display:block!important;visibility:visible!important;opacity:1!important;z-index:40!important;overflow:visible!important; }
+.alek-stat-modal-overlay .r23-stat-quadrant-labels text { font:900 22px/1 Georgia,serif!important;letter-spacing:.025em!important;paint-order:stroke fill!important;stroke-width:4px!important;stroke-linejoin:round!important;dominant-baseline:central!important; }
+.alek-stat-modal-overlay .r23-stat-quadrant-labels .q-northwest { fill:#ef9cff!important;stroke:#1b0628!important;filter:drop-shadow(0 0 6px rgba(222,77,255,.72))!important; }
+.alek-stat-modal-overlay .r23-stat-quadrant-labels .q-northeast { fill:#ffe27b!important;stroke:#261701!important;filter:drop-shadow(0 0 6px rgba(255,201,52,.70))!important; }
+.alek-stat-modal-overlay .r23-stat-quadrant-labels .q-southeast { fill:#73f4e7!important;stroke:#001d1b!important;filter:drop-shadow(0 0 6px rgba(39,229,214,.72))!important; }
+.alek-stat-modal-overlay .r23-stat-quadrant-labels .q-southwest { fill:#78bfff!important;stroke:#03142c!important;filter:drop-shadow(0 0 6px rgba(47,139,255,.74))!important; }
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-fill { border-radius:0!important;clip-path:inset(0 0 0 0)!important; }
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-fill > .energy-flow { top:-18px!important;bottom:-18px!important;height:auto!important;border-radius:0!important; }
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-fill > .energy-flow > .energy-flow-canvas { height:100%!important;border-radius:0!important; }
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .metanet-heading strong { font-size:.36rem!important;letter-spacing:-.09em!important; }
+
+/* R51 FINAL · 44 px ölçüler korunur; dört çerçeve 1 px ortak kenarla ve içerikle kesintisiz birleşir. */
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail { position:relative!important;display:block!important;width:173px!important;min-width:173px!important;max-width:173px!important;overflow:visible!important; }
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail > .vertical-resource { position:absolute!important;top:0!important;bottom:0!important;height:100%!important;width:44px!important;min-width:44px!important;max-width:44px!important;margin:0!important;opacity:1!important;filter:none!important; }
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail > .vertical-resource:nth-child(1){left:0!important}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail > .vertical-resource:nth-child(2){left:43px!important}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail > .vertical-resource:nth-child(3){left:86px!important}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .aeryth-rail > .vertical-resource:nth-child(4){left:129px!important}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail > .character-detail-content{margin-left:-1px!important}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-fill,
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-lag{transition:height .56s cubic-bezier(.16,.78,.2,1)!important;will-change:height!important}
+.alek-stat-modal-overlay .r23-stat-quadrant-labels textPath{text-anchor:middle!important}
+
+/* R52 · Dolum değişirken enerji resmi ölçeklenmez. Dolum katmanı yalnızca
+   tam boy dokuyu alttan yukarı doğru kırpan bir pencere görevi görür. */
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-meter{
+  container-type:size!important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-fill{
+  overflow:hidden!important;
+  contain:paint!important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-fill > .energy-flow{
+  position:absolute!important;
+  left:0!important;right:0!important;bottom:0!important;top:auto!important;
+  width:100%!important;height:100cqh!important;min-height:100cqh!important;
+  transform:none!important;border-radius:0!important;
+}
+#alekLegacyMainPanel.character-detail-open > .character-detail-panel.character-master-detail .vertical-resource-fill > .energy-flow > .energy-flow-canvas{
+  width:100%!important;height:100%!important;min-height:100%!important;
+  transform:none!important;border-radius:0!important;
+}
+#alekLegacyMainPanel .alek-item-slot.placeholder-moon{
+  border-color:rgba(80,205,255,.72)!important;
+  background:radial-gradient(circle at 50% 42%,rgba(42,168,229,.18),rgba(2,9,14,.98) 68%)!important;
+  box-shadow:inset 0 0 22px rgba(39,172,231,.12),0 0 16px rgba(35,164,222,.12)!important;
+}
+#alekLegacyMainPanel .alek-item-slot .alek-item-placeholder-moon{
+  width:78%!important;height:78%!important;object-fit:contain!important;border-radius:50%!important;
+  filter:drop-shadow(0 0 12px rgba(52,192,255,.48))!important;
+}
+
+/* R53 FINAL · Dört bar kendi içinde ortak kenarlı kalır; sağ kağıda 5px nefes payı. */
+#alekLegacyMainPanel.character-detail-open>.character-detail-panel.character-master-detail{
+  grid-template-columns:173px minmax(0,1fr)!important;
+  column-gap:5px!important;row-gap:0!important;
+}
+#alekLegacyMainPanel.character-detail-open>.character-detail-panel.character-master-detail>.character-detail-content{
+  margin-left:0!important;border-left:1px solid rgba(105,161,184,.46)!important;
+}
+#alekLegacyMainPanel.character-detail-open>.character-detail-panel.character-master-detail .vertical-resource-lag{
+  z-index:1!important;border-radius:0!important;clip-path:none!important;
+  background:linear-gradient(180deg,rgba(255,244,185,.72),rgba(109,220,255,.45))!important;
+  box-shadow:0 0 10px rgba(119,220,255,.28)!important;
+}
+#alekLegacyMainPanel.character-detail-open>.character-detail-panel.character-master-detail .health-rail-reservoir .vertical-resource-lag{background:linear-gradient(180deg,#ff9aab,#e92f55)!important;box-shadow:0 0 10px rgba(255,61,99,.5)!important}
+#alekLegacyMainPanel.character-detail-open>.character-detail-panel.character-master-detail .mana-rail-reservoir .vertical-resource-lag{background:linear-gradient(180deg,#9bedff,#22aee8)!important;box-shadow:0 0 10px rgba(43,193,255,.5)!important}
+#alekLegacyMainPanel.character-detail-open>.character-detail-panel.character-master-detail .stamina-rail-reservoir .vertical-resource-lag{background:linear-gradient(180deg,#ffe09a,#f28c22)!important;box-shadow:0 0 10px rgba(255,157,40,.5)!important}
+#alekLegacyMainPanel.character-detail-open>.character-detail-panel.character-master-detail .metanet-rail-reservoir .vertical-resource-lag{background:linear-gradient(180deg,#d7ff8a,#72c833)!important;box-shadow:0 0 10px rgba(139,232,64,.5)!important}
+#alekLegacyMainPanel.character-detail-open>.character-detail-panel.character-master-detail .vertical-resource-fill{
+  z-index:2!important;border-radius:0!important;
+}
+#alekLegacyMainPanel.character-detail-open>.character-detail-panel.character-master-detail .vertical-resource-fill:before,
+#alekLegacyMainPanel.character-detail-open>.character-detail-panel.character-master-detail .vertical-resource-fill:after{
+  border-radius:0!important;
+}
+#alekLegacyMainPanel .alek-item-slot img,#alekLegacyMainPanel .alek-item-slot b,
+#alekLegacyMainPanel .alek-item-slot .alek-empty-slot-seal{pointer-events:none!important}
+
+/* R55 · Kağıt, Tavern, GPT kapısı ve akla gelmeyen legacy yüzeylerde de aynı
+   lore imleci. Yalnız kanonik Mevcudat kendi standart işaretçisini korur. */
+html body #alekLegacyMainPanel,html body #alekLegacyMainPanel *{
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34'%3E%3Cpath d='M4 3 27 15l-9 3-4 11Z' fill='%23051119' stroke='%237ce8ff' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='m11 9 9 6-7 2Z' fill='%23efd06d'/%3E%3Ccircle cx='27' cy='7' r='3' fill='%23051119' stroke='%23efd06d'/%3E%3C/svg%3E") 4 3,auto!important
+}
+html body #alekLegacyMainPanel button,html body #alekLegacyMainPanel a,html body #alekLegacyMainPanel [role="button"],html body #alekLegacyMainPanel input,html body #alekLegacyMainPanel textarea,html body #alekLegacyMainPanel select{
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34'%3E%3Cpath d='M4 3 27 15l-9 3-4 11Z' fill='%23051119' stroke='%23efd06d' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='m11 9 9 6-7 2Z' fill='%237ce8ff'/%3E%3Ccircle cx='27' cy='7' r='3' fill='%23051119' stroke='%237ce8ff'/%3E%3C/svg%3E") 4 3,pointer!important
+}
+html body #alekLegacyMainPanel .mevcudat-browser,html body #alekLegacyMainPanel .mevcudat-browser *,html body .joa-inventory-page-shell,html body .joa-inventory-page-shell *,html body .joa-inventory-drawer,html body .joa-inventory-drawer *{cursor:var(--alek-cursor-move,var(--alek-cursor))!important}
+html body #alekLegacyMainPanel .mevcudat-browser button,html body .joa-inventory-page-shell button,html body .joa-inventory-drawer button{cursor:var(--alek-cursor-action,var(--alek-cursor))!important}
+
+/* Dolu/Mavi Ay/boş yuva tıklaması daima pencerenin üst hit katmanındadır. */
+#alekLegacyMainPanel .alek-inventory-window{pointer-events:none!important;z-index:4!important}
+#alekLegacyMainPanel .alek-inventory-window>.alek-item-slot{pointer-events:auto!important;z-index:1!important;touch-action:manipulation!important}
+
+/* R56 PATCH 32 · yalnız Çanta: gerçek eşya taşarsa tekerlek çalışır; görünür
+   scrollbar ve onun ayırdığı sabit oluk içerik genişliğini daraltmaz. */
+#alekLegacyMainPanel .alek-inventory-grid{
+  overflow-x:hidden!important;
+  overflow-y:auto!important;
+  scrollbar-width:none!important;
+  -ms-overflow-style:none!important;
+  scrollbar-gutter:auto!important;
+}
+#alekLegacyMainPanel .alek-inventory-grid::-webkit-scrollbar{
+  display:none!important;
+  width:0!important;
+  height:0!important;
+}
+
+/* R54 · Ray ile kağıt arasında yalnızca 5 px boşluk; aradaki fazladan çizgi yok. */
+#alekLegacyMainPanel.character-detail-open>.character-detail-panel.character-master-detail{column-gap:5px!important}
+#alekLegacyMainPanel.character-detail-open>.character-detail-panel.character-master-detail>.character-detail-content{margin-left:0!important;border-left:0!important;box-shadow:none!important}
+
+/* R57 · Ünvan | rastgele çağ | Ömür Çağı tek satırda. Boş değer null kalır. */
+#alekLegacyMainPanel .character-title-age-row{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) 32px minmax(112px,136px)!important;
+  align-items:stretch!important;
+  gap:7px!important;
+  min-width:0!important;
+}
+#alekLegacyMainPanel .character-title-age-row>.character-title-seal{min-width:0!important;margin:0!important}
+#alekLegacyMainPanel .character-title-age-row>.age-rune{
+  width:32px!important;min-width:32px!important;height:32px!important;margin:0!important;
+  align-self:center!important;border-radius:50%!important;
+}
+#alekLegacyMainPanel .character-life-age{
+  display:grid!important;grid-template-columns:auto minmax(42px,1fr)!important;align-items:center!important;gap:5px!important;
+  min-width:0!important;padding:4px 6px!important;border:1px solid rgba(102,197,224,.38)!important;border-radius:8px!important;
+  background:rgba(3,18,28,.72)!important;color:#9dc8d7!important;
+}
+#alekLegacyMainPanel .character-life-age>span{font-size:.58rem!important;line-height:1.05!important;letter-spacing:.05em!important;text-transform:uppercase!important}
+#alekLegacyMainPanel .character-life-age>input{width:100%!important;min-width:0!important;border:0!important;background:transparent!important;color:#e8fbff!important;text-align:right!important;padding:2px!important}
+#alekLegacyMainPanel .character-life-age>input:disabled{opacity:.56!important}
+
+/* R57 · Konteynerlerin kaynakları ortak bir havuz değildir. Her satır gerçek
+   kişinin kendi Can/Mana/Takat/Metanet kaydını gösterir ve kendi kağıdını açar. */
+#alekLegacyMainPanel .personal-resource-console{display:grid!important;gap:12px!important}
+#alekLegacyMainPanel .personal-resource-members{display:grid!important;gap:8px!important}
+#alekLegacyMainPanel .personal-resource-member{
+  display:grid!important;grid-template-columns:minmax(150px,1fr) auto!important;gap:5px 12px!important;
+  width:100%!important;padding:10px 12px!important;text-align:left!important;
+  border:1px solid rgba(104,202,230,.3)!important;border-radius:10px!important;
+  background:linear-gradient(135deg,rgba(4,22,32,.92),rgba(12,16,31,.94))!important;color:#e9fbff!important;
+}
+#alekLegacyMainPanel .personal-resource-member:hover{border-color:rgba(122,230,255,.72)!important;box-shadow:0 0 18px rgba(53,190,225,.14)!important}
+#alekLegacyMainPanel .personal-resource-member>strong{font-size:.9rem!important}
+#alekLegacyMainPanel .personal-resource-member>em{font-size:.66rem!important;color:#91bdca!important;font-style:normal!important;text-align:right!important}
+#alekLegacyMainPanel .personal-resource-member>i{grid-column:1/-1!important;font-size:.62rem!important;color:#79d7ed!important;font-style:normal!important;text-align:right!important}
+#alekLegacyMainPanel .personal-resource-values{grid-column:1/-1!important;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px!important}
+#alekLegacyMainPanel .personal-resource-value{display:grid!important;gap:2px!important;padding:6px!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:7px!important;background:rgba(0,0,0,.25)!important}
+#alekLegacyMainPanel .personal-resource-value small{font-size:.55rem!important;letter-spacing:.08em!important;color:#9db8c1!important}
+#alekLegacyMainPanel .personal-resource-value b{font-size:.72rem!important;color:#f4fbff!important}
+#alekLegacyMainPanel .personal-resource-value.health{border-color:rgba(238,73,105,.35)!important}
+#alekLegacyMainPanel .personal-resource-value.mana{border-color:rgba(47,183,235,.35)!important}
+#alekLegacyMainPanel .personal-resource-value.stamina{border-color:rgba(242,154,47,.38)!important}
+#alekLegacyMainPanel .personal-resource-value.metanet{border-color:rgba(163,126,225,.4)!important}
+#alekLegacyMainPanel .personal-resource-rail{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:7px!important;padding:14px 8px!important;text-align:center!important}
+#alekLegacyMainPanel .personal-resource-rail-sigil,#alekLegacyMainPanel .personal-side-sigil{font-size:1.6rem!important;color:#7de8ff!important;text-shadow:0 0 12px rgba(92,216,246,.6)!important}
+#alekLegacyMainPanel .personal-resource-rail>b{font-size:1.45rem!important;color:#f4d26d!important}
+#alekLegacyMainPanel .personal-resource-rail>small,#alekLegacyMainPanel .personal-resource-rail>span{font-size:.58rem!important;color:#9cbcc6!important}
+#alekLegacyMainPanel .personal-resource-crown .unified-crown-resource.personal{min-width:126px!important}
+#alekLegacyMainPanel .journey-container-side-rail.personal .journey-container-rail-panel{justify-content:center!important;text-align:center!important}
+@media(max-width:760px){#alekLegacyMainPanel .personal-resource-values{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
