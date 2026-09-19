@@ -1,0 +1,166 @@
+{
+  "frameFile": "taxonomy_frame.png",
+  "maskFile": "taxonomy_energy_channel.png",
+  "layers": [
+    {
+      "fileName": "P-100-2400.png",
+      "colorTag": "P",
+      "visibility": 100,
+      "opacity": 1,
+      "durationSeconds": 2400,
+      "variant": ""
+    },
+    {
+      "fileName": "P-80-100.png",
+      "colorTag": "P",
+      "visibility": 80,
+      "opacity": 0.8,
+      "durationSeconds": 100,
+      "variant": ""
+    },
+    {
+      "fileName": "P-60-50.png",
+      "colorTag": "P",
+      "visibility": 60,
+      "opacity": 0.6,
+      "durationSeconds": 50,
+      "variant": ""
+    },
+    {
+      "fileName": "P-40-25.png",
+      "colorTag": "P",
+      "visibility": 40,
+      "opacity": 0.4,
+      "durationSeconds": 25,
+      "variant": ""
+    },
+    {
+      "fileName": "P-20-10.png",
+      "colorTag": "P",
+      "visibility": 20,
+      "opacity": 0.2,
+      "durationSeconds": 10,
+      "variant": ""
+    },
+    {
+      "fileName": "S-100-2400.png",
+      "colorTag": "S",
+      "visibility": 100,
+      "opacity": 1,
+      "durationSeconds": 2400,
+      "variant": ""
+    },
+    {
+      "fileName": "S-80-100.png",
+      "colorTag": "S",
+      "visibility": 80,
+      "opacity": 0.8,
+      "durationSeconds": 100,
+      "variant": ""
+    },
+    {
+      "fileName": "S-80-50.png",
+      "colorTag": "S",
+      "visibility": 80,
+      "opacity": 0.8,
+      "durationSeconds": 50,
+      "variant": ""
+    },
+    {
+      "fileName": "S-40-25.png",
+      "colorTag": "S",
+      "visibility": 40,
+      "opacity": 0.4,
+      "durationSeconds": 25,
+      "variant": ""
+    },
+    {
+      "fileName": "S-20-10.png",
+      "colorTag": "S",
+      "visibility": 20,
+      "opacity": 0.2,
+      "durationSeconds": 10,
+      "variant": ""
+    },
+    {
+      "fileName": "M-100-2400.png",
+      "colorTag": "M",
+      "visibility": 100,
+      "opacity": 1,
+      "durationSeconds": 2400,
+      "variant": ""
+    },
+    {
+      "fileName": "M-80-100.png",
+      "colorTag": "M",
+      "visibility": 80,
+      "opacity": 0.8,
+      "durationSeconds": 100,
+      "variant": ""
+    },
+    {
+      "fileName": "M-60-50.png",
+      "colorTag": "M",
+      "visibility": 60,
+      "opacity": 0.6,
+      "durationSeconds": 50,
+      "variant": ""
+    },
+    {
+      "fileName": "M-40-25.png",
+      "colorTag": "M",
+      "visibility": 40,
+      "opacity": 0.4,
+      "durationSeconds": 25,
+      "variant": ""
+    },
+    {
+      "fileName": "M-20-10.png",
+      "colorTag": "M",
+      "visibility": 20,
+      "opacity": 0.2,
+      "durationSeconds": 10,
+      "variant": ""
+    },
+    {
+      "fileName": "T-100-2400.png",
+      "colorTag": "T",
+      "visibility": 100,
+      "opacity": 1,
+      "durationSeconds": 2400,
+      "variant": ""
+    },
+    {
+      "fileName": "T-80-100.png",
+      "colorTag": "T",
+      "visibility": 80,
+      "opacity": 0.8,
+      "durationSeconds": 100,
+      "variant": ""
+    },
+    {
+      "fileName": "T-60-50.png",
+      "colorTag": "T",
+      "visibility": 60,
+      "opacity": 0.6,
+      "durationSeconds": 50,
+      "variant": ""
+    },
+    {
+      "fileName": "T-40-25.png",
+      "colorTag": "T",
+      "visibility": 40,
+      "opacity": 0.4,
+      "durationSeconds": 25,
+      "variant": ""
+    },
+    {
+      "fileName": "T-20-10.png",
+      "colorTag": "T",
+      "visibility": 20,
+      "opacity": 0.2,
+      "durationSeconds": 10,
+      "variant": ""
+    }
+  ]
+}

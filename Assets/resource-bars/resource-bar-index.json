@@ -1,0 +1,291 @@
+{
+    "format":  "PREFIX-OPACITY-SECONDS[-VARIANT].png",
+    "resources":  {
+                      "aia":  [
+                                  {
+                                      "fileName":  "H-100-12.png",
+                                      "relativePath":  "health/H-100-12.png",
+                                      "opacityPercent":  100,
+                                      "opacity":  1,
+                                      "durationSeconds":  12,
+                                      "variant":  ""
+                                  },
+                                  {
+                                      "fileName":  "H-50-9.png",
+                                      "relativePath":  "health/H-50-9.png",
+                                      "opacityPercent":  50,
+                                      "opacity":  0.5,
+                                      "durationSeconds":  9,
+                                      "variant":  ""
+                                  },
+                                  {
+                                      "fileName":  "H-25-6.png",
+                                      "relativePath":  "health/H-25-6.png",
+                                      "opacityPercent":  25,
+                                      "opacity":  0.25,
+                                      "durationSeconds":  6,
+                                      "variant":  ""
+                                  },
+                                  {
+                                      "fileName":  "H-12-3.png",
+                                      "relativePath":  "health/H-12-3.png",
+                                      "opacityPercent":  12,
+                                      "opacity":  0.12,
+                                      "durationSeconds":  3,
+                                      "variant":  ""
+                                  }
+                              ],
+                      "mana":  [
+                                   {
+                                       "fileName":  "A-100-12.png",
+                                       "relativePath":  "mana/A-100-12.png",
+                                       "opacityPercent":  100,
+                                       "opacity":  1,
+                                       "durationSeconds":  12,
+                                       "variant":  ""
+                                   },
+                                   {
+                                       "fileName":  "A-75-10.png",
+                                       "relativePath":  "mana/A-75-10.png",
+                                       "opacityPercent":  75,
+                                       "opacity":  0.75,
+                                       "durationSeconds":  10,
+                                       "variant":  ""
+                                   },
+                                   {
+                                       "fileName":  "A-50-8.png",
+                                       "relativePath":  "mana/A-50-8.png",
+                                       "opacityPercent":  50,
+                                       "opacity":  0.5,
+                                       "durationSeconds":  8,
+                                       "variant":  ""
+                                   },
+                                   {
+                                       "fileName":  "A-25-6.png",
+                                       "relativePath":  "mana/A-25-6.png",
+                                       "opacityPercent":  25,
+                                       "opacity":  0.25,
+                                       "durationSeconds":  6,
+                                       "variant":  ""
+                                   },
+                                   {
+                                       "fileName":  "A-18-3.png",
+                                       "relativePath":  "mana/A-18-3.png",
+                                       "opacityPercent":  18,
+                                       "opacity":  0.18,
+                                       "durationSeconds":  3,
+                                       "variant":  ""
+                                   },
+                                   {
+                                       "fileName":  "A-14-2.png",
+                                       "relativePath":  "mana/A-14-2.png",
+                                       "opacityPercent":  14,
+                                       "opacity":  0.14,
+                                       "durationSeconds":  2,
+                                       "variant":  ""
+                                   }
+                               ],
+                      "stamina":  [
+                                      {
+                                          "fileName":  "TK-100-12.png",
+                                          "relativePath":  "takat/TK-100-12.png",
+                                          "opacityPercent":  100,
+                                          "opacity":  1,
+                                          "durationSeconds":  12,
+                                          "variant":  ""
+                                      },
+                                      {
+                                          "fileName":  "TK-75-10.png",
+                                          "relativePath":  "takat/TK-75-10.png",
+                                          "opacityPercent":  75,
+                                          "opacity":  0.75,
+                                          "durationSeconds":  10,
+                                          "variant":  ""
+                                      },
+                                      {
+                                          "fileName":  "TK-50-8.png",
+                                          "relativePath":  "takat/TK-50-8.png",
+                                          "opacityPercent":  50,
+                                          "opacity":  0.5,
+                                          "durationSeconds":  8,
+                                          "variant":  ""
+                                      },
+                                      {
+                                          "fileName":  "TK-25-6.png",
+                                          "relativePath":  "takat/TK-25-6.png",
+                                          "opacityPercent":  25,
+                                          "opacity":  0.25,
+                                          "durationSeconds":  6,
+                                          "variant":  ""
+                                      },
+                                      {
+                                          "fileName":  "TK-18-3.png",
+                                          "relativePath":  "takat/TK-18-3.png",
+                                          "opacityPercent":  18,
+                                          "opacity":  0.18,
+                                          "durationSeconds":  3,
+                                          "variant":  ""
+                                      },
+                                      {
+                                          "fileName":  "TK-14-2.png",
+                                          "relativePath":  "takat/TK-14-2.png",
+                                          "opacityPercent":  14,
+                                          "opacity":  0.14,
+                                          "durationSeconds":  2,
+                                          "variant":  ""
+                                      }
+                                  ],
+                      "metanet":  [
+                                      {
+                                          "fileName":  "MT-100-12.png",
+                                          "relativePath":  "metanet/MT-100-12.png",
+                                          "opacityPercent":  100,
+                                          "opacity":  1,
+                                          "durationSeconds":  12,
+                                          "variant":  ""
+                                      },
+                                      {
+                                          "fileName":  "MT-75-10.png",
+                                          "relativePath":  "metanet/MT-75-10.png",
+                                          "opacityPercent":  75,
+                                          "opacity":  0.75,
+                                          "durationSeconds":  10,
+                                          "variant":  ""
+                                      },
+                                      {
+                                          "fileName":  "MT-50-8.png",
+                                          "relativePath":  "metanet/MT-50-8.png",
+                                          "opacityPercent":  50,
+                                          "opacity":  0.5,
+                                          "durationSeconds":  8,
+                                          "variant":  ""
+                                      },
+                                      {
+                                          "fileName":  "MT-25-6.png",
+                                          "relativePath":  "metanet/MT-25-6.png",
+                                          "opacityPercent":  25,
+                                          "opacity":  0.25,
+                                          "durationSeconds":  6,
+                                          "variant":  ""
+                                      },
+                                      {
+                                          "fileName":  "MT-18-3.png",
+                                          "relativePath":  "metanet/MT-18-3.png",
+                                          "opacityPercent":  18,
+                                          "opacity":  0.18,
+                                          "durationSeconds":  3,
+                                          "variant":  ""
+                                      },
+                                      {
+                                          "fileName":  "MT-14-2.png",
+                                          "relativePath":  "metanet/MT-14-2.png",
+                                          "opacityPercent":  14,
+                                          "opacity":  0.14,
+                                          "durationSeconds":  2,
+                                          "variant":  ""
+                                      }
+                                  ],
+                      "mageen":  [
+                                     {
+                                         "fileName":  "M-100-12.png",
+                                         "relativePath":  "mageen/M-100-12.png",
+                                         "opacityPercent":  100,
+                                         "opacity":  1,
+                                         "durationSeconds":  12,
+                                         "variant":  ""
+                                     },
+                                     {
+                                         "fileName":  "M-75-8.png",
+                                         "relativePath":  "mageen/M-75-8.png",
+                                         "opacityPercent":  75,
+                                         "opacity":  0.75,
+                                         "durationSeconds":  8,
+                                         "variant":  ""
+                                     },
+                                     {
+                                         "fileName":  "M-50-4.png",
+                                         "relativePath":  "mageen/M-50-4.png",
+                                         "opacityPercent":  50,
+                                         "opacity":  0.5,
+                                         "durationSeconds":  4,
+                                         "variant":  ""
+                                     },
+                                     {
+                                         "fileName":  "M-25-2.png",
+                                         "relativePath":  "mageen/M-25-2.png",
+                                         "opacityPercent":  25,
+                                         "opacity":  0.25,
+                                         "durationSeconds":  2,
+                                         "variant":  ""
+                                     }
+                                 ],
+                      "arcana":  [
+                                     {
+                                         "fileName":  "BS-100-12.png",
+                                         "relativePath":  "buyu-seviyesi/BS-100-12.png",
+                                         "opacityPercent":  100,
+                                         "opacity":  1,
+                                         "durationSeconds":  12,
+                                         "variant":  ""
+                                     },
+                                     {
+                                         "fileName":  "BS-75-8.png",
+                                         "relativePath":  "buyu-seviyesi/BS-75-8.png",
+                                         "opacityPercent":  75,
+                                         "opacity":  0.75,
+                                         "durationSeconds":  8,
+                                         "variant":  ""
+                                     },
+                                     {
+                                         "fileName":  "BS-50-4.png",
+                                         "relativePath":  "buyu-seviyesi/BS-50-4.png",
+                                         "opacityPercent":  50,
+                                         "opacity":  0.5,
+                                         "durationSeconds":  4,
+                                         "variant":  ""
+                                     },
+                                     {
+                                         "fileName":  "BS-25-2.png",
+                                         "relativePath":  "buyu-seviyesi/BS-25-2.png",
+                                         "opacityPercent":  25,
+                                         "opacity":  0.25,
+                                         "durationSeconds":  2,
+                                         "variant":  ""
+                                     }
+                                 ],
+                      "skill":  [
+                                    {
+                                        "fileName":  "S-100-12.png",
+                                        "relativePath":  "skill/S-100-12.png",
+                                        "opacityPercent":  100,
+                                        "opacity":  1,
+                                        "durationSeconds":  12,
+                                        "variant":  ""
+                                    },
+                                    {
+                                        "fileName":  "S-75-8.png",
+                                        "relativePath":  "skill/S-75-8.png",
+                                        "opacityPercent":  75,
+                                        "opacity":  0.75,
+                                        "durationSeconds":  8,
+                                        "variant":  ""
+                                    },
+                                    {
+                                        "fileName":  "S-50-4.png",
+                                        "relativePath":  "skill/S-50-4.png",
+                                        "opacityPercent":  50,
+                                        "opacity":  0.5,
+                                        "durationSeconds":  4,
+                                        "variant":  ""
+                                    },
+                                    {
+                                        "fileName":  "S-25-2.png",
+                                        "relativePath":  "skill/S-25-2.png",
+                                        "opacityPercent":  25,
+                                        "opacity":  0.25,
+                                        "durationSeconds":  2,
+                                        "variant":  ""
+                                    }
+                                ]
+                  }
+}
