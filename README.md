@@ -35,6 +35,7 @@ JOA is a world-state machine for adventures.**
 
 [Features](#-what-joa-actually-does) ·
 [Visual Tour](#-visual-tour) ·
+[Peoples](#-the-24-canonical-peoples) ·
 [Quick Start](#-quick-start) ·
 [Controls](#-command-atlas--shortcut-cheat-sheet) ·
 [Architecture](#-architecture) ·
@@ -248,6 +249,210 @@ JOA includes a **24-race canonical Ałek’ryŧhæ framework** and also supports
 - an **Outer Realm** free-form origin.
 
 The goal is not to force every campaign into one biological model. The canonical setting can remain strict while external worlds still have a place to enter.
+
+# 🌍 The 24 canonical peoples
+
+Ałek’ryŧhæ uses **24 canonical peoples** with their original in-world names. The familiar fantasy terms below are only reader-friendly reference points. They are **not replacement names**, and several peoples deliberately do not map cleanly onto a standard fantasy species.
+
+Each people also carries a distinct **primary instinctive sense**: a biological or A̤ɐ͜ɨǣ́ꞎ͡ƣ-based way of interpreting the world. These senses do not replace ordinary sight, hearing or smell; they add another layer of perception. True hybrids may inherit more than one root.
+
+> This section is intentionally public-facing and non-explicit. It focuses on identity, culture, environment and signature abilities rather than private biological or reproductive lore.
+
+### 🏛️ Ħǽɱ’Ŧʏǽɍŋ
+
+**Familiar fantasy reference:** Human.
+
+The most widespread and adaptable people in the setting. Ħǽɱ’Ŧʏǽɍŋ are physically less specialized than many other peoples, but compensate through organization, equipment, learning and an unusual compatibility with potions, accessories and external enhancements. Their kingdoms, cities, guilds, armies, farms, ports and academies make them the setting's broadest cultural baseline.
+
+**Primary instinct:** **Adaptive Sense**, which helps them intuit how their body will respond to environments, equipment, potions and outside enhancements.
+
+### 🕯️ Ḓɐꞎ’Ɍɨɱ
+
+**Familiar fantasy reference:** Dark nobility with a vampire-like aesthetic, but **not** classic vampires.
+
+Ḓɐꞎ’Ɍɨɱ are elegant, highly ordered and aristocratic, with a strong tradition of monarchy, law, architecture, art and disciplined martial culture. They do not drink blood. They do not age in the ordinary sense, but can still be killed, which places them closer to ageless dark-fantasy nobles than undead creatures.
+
+**Primary instinct:** **Night-Presence Sense**, allowing them to distinguish hidden movement, concealed beings and irregularities in low light.
+
+### ♟️ Ɵɍʏ’Ƙǽŋ
+
+**Familiar fantasy reference:** No direct stock-fantasy equivalent.
+
+Ɵɍʏ’Ƙǽŋ are fearless, forceful and expansion-minded people whose cities blend monumental architecture with living nature. Their culture treats will, conquest and imposed order as serious forces rather than abstract ideas. The black-violet Ʋħǽ’ɍűŋ presence around them gives their territories a distinctive atmosphere without turning those lands into lifeless wastelands.
+
+**Primary instinct:** **Will-Threshold Sense**, reading determination, fear, attack readiness and disturbances around Ʋħǽ’ɍűŋ thresholds.
+
+### 🌊 Ɍʏɨɍʉŋ’Χɐɍűŋ
+
+**Familiar fantasy reference:** Aquatic humanoids or a merfolk analogue without fish tails.
+
+Ɍʏɨɍʉŋ’Χɐɍűŋ are fully adapted to life underwater while retaining a two-armed, two-legged humanoid body. Their low-friction skin, powerful swimming musculature and Velyth breathing system make underwater movement as natural to them as walking is to a human. Their settlements range from coasts and half-submerged cities to fully underwater communities.
+
+**Primary instinct:** **Water-Movement Sense**, reading currents, vibration, displaced water, movement traces and changes in gravitational direction within water.
+
+### 🐋 Þɐꞎɐśś’Ɱǿɍʏɴ
+
+**Familiar fantasy reference:** Sky-island people and flying-whale riders.
+
+Þɐꞎɐśś’Ɱǿɍʏɴ live among floating lands, dense cloud paths and enormous domesticated flying whales. They do not possess ordinary true flight; instead, their bodies are adapted for extraordinary vertical movement and long leaps between parts of their aerial geography. The largest flying whales can support mobile settlements, making migration, trade and sky travel central parts of their civilization.
+
+**Primary instinct:** **Cloud-Path Sense**, reading cloud density, lift zones, aerial routes and changes in the balance of floating masses.
+
+### 🌴 Ɱǽṙɇþɨ’Śɵꞎɐʏŋ
+
+**Familiar fantasy reference:** Tropical island and tide folk.
+
+Ɱǽṙɇþɨ’Śɵꞎɐʏŋ are associated with warm coasts, island cities, coral harbors, music, scent, trade and water-centered life. They are strong swimmers and can remain underwater for unusually long periods, but they are not a fully aquatic people. Skilled members can influence the direction and force of existing water masses, from useful coastal manipulation to very large waves at exceptional levels of power.
+
+**Primary instinct:** **Biochemical Rhythm Sense**, interpreting scent composition, toxins, bodily stress, exertion and other chemical or rhythmic changes.
+
+### 🍷 Þɨɍ’Ŋɵčŧ
+
+**Familiar fantasy reference:** Cursed vampire-like people.
+
+Þɨɍ’Ŋɵčŧ originated through an old curse connected to Ḓɐꞎ’Ɍɨɱ history. They are dependent on blood, do not age normally and can still be killed. Their public image is frightening, but their lore is deliberately tragic: they are intelligent people living with a dangerous biological need rather than mindless undead predators.
+
+**Primary instinct:** **Blood-Resonance Sense**, perceiving the presence and condition of living blood and changes carried through it.
+
+### 🐲 Ḓɍɐỿ’Žűɍχǽɍ
+
+**Familiar fantasy reference:** Dragonkin.
+
+Ḓɍɐỿ’Žűɍχǽɍ are winged, horned, tailed and scaled humanoids associated with high peaks, volcanic ridges, treasure halls, metalwork and ancient lineages. Their cities favor strong stone, precious metals, elevated landing spaces and dramatic mountain architecture. They are visually draconic without simply being humanoid copies of ordinary dragons.
+
+**Primary instinct:** **Thermal-Flight Sense**, reading rising hot air, volcanic thermals, fast air currents and flight vectors.
+
+### 🍃 Ǽþ’Ʋǽɍʏŋ
+
+**Familiar fantasy reference:** Nature elves.
+
+Ǽþ’Ʋǽɍʏŋ are graceful, long-lived and strongly tied to forests, family, life and natural continuity. Their societies value beauty, memory, loyalty and the protection of living environments, while still maintaining serious martial traditions when their lands are threatened. They fill the broad "ancient woodland people" role without being a direct copy of conventional elves.
+
+**Primary instinct:** **Life Sense**, reading vitality, health, traces of living beings and biological change in the environment.
+
+### 🔥 Ƶɐṙ’Χɐɍžűŋ
+
+**Familiar fantasy reference:** Fire elves or forge folk.
+
+Ƶɐṙ’Χɐɍžűŋ are adapted to hot mining regions, foundry cities, metal valleys and industrial craft. Their bodies carry visible heat-like traits beneath the skin, and their culture is deeply connected to metallurgy, engineering, weapons, armor and large-scale craftsmanship. They are less about throwing fire and more about understanding heat, material and the behavior of metal.
+
+**Primary instinct:** **Heat-Metal Sense**, reading temperature distribution, internal stress in metal, ore behavior and thermal fracture points.
+
+### 😼 Ɐʉ’Ƀɇŋ
+
+**Familiar fantasy reference:** Catfolk.
+
+Ɐʉ’Ƀɇŋ are agile, sharp-sensed and socially flexible people commonly associated with ports, markets, rooftops, inns, trade routes and the grey space between formal and informal economies. Curiosity, independence and opportunism are recurring cultural traits, so they can appear as merchants, scouts, guides, messengers or rogues without being reduced to a single profession.
+
+**Primary instinct:** **Auditory-Predator Sense**, separating tiny sounds, direction changes, footsteps, breathing, vibration and small movement patterns.
+
+### 💎 Žɨꞎ’Ƙɍɐŧ
+
+**Familiar fantasy reference:** A goblin-dwarf-elf blend.
+
+Žɨꞎ’Ƙɍɐŧ are small, green-skinned subterranean people known for mining, stonework, crystal craft and compact cave settlements. They are generally community-minded and productive rather than destructive "monster goblins." Their size contrasts with their extraordinary understanding of underground structure and mineral space.
+
+**Primary instinct:** **Vein-Void Sense**, locating mineral veins, stone fractures, cave voids and underground geometry.
+
+### 🪓 Χɐʉɍ’Ǥɐþ
+
+**Familiar fantasy reference:** Amazon warriors with some orc-like visual traits.
+
+Χɐʉɍ’Ǥɐþ are a powerful green-skinned forest people built around physical strength, independence, clan life and protection of those they accept as their own. Their culture values capable warriors, but strength is not treated as an excuse for cruelty. In conventional fantasy terms they occupy part of the space between amazons, forest warriors and honorable orc archetypes.
+
+**Primary instinct:** **Force Sense**, reading muscle tension, weight transfer, the direction of physical attacks and changes in bodily force.
+
+### ⛰️ Ɱʉɵ’Ŋþɨɍ
+
+**Familiar fantasy reference:** Giants.
+
+Ɱʉɵ’Ŋþɨɍ are enormous, heavy and immensely strong humanoids whose communities favor broad landscapes, mountain foothills, open settlements and personal freedom. Their scale affects everything from architecture to combat and transport. Despite their physical power, their defining cultural theme is freedom rather than domination.
+
+**Primary instinct:** **Mass-Structure Sense**, reading large masses, load distribution, structural vibration and the balance of heavy movement.
+
+### ❄️ Ɨśƙǽɬ’Ʋǽɍʏþ
+
+**Familiar fantasy reference:** Ice elves.
+
+Ɨśƙǽɬ’Ʋǽɍʏþ are pale, cold-adapted elf-like people found across frozen biomes, glacier valleys and crystalline ice settlements. They can control and channel intense cold through their own A̤ɐ͜ɨǣ́ꞎ͡ƣ-aligned physiology, including through close contact or breath. Their aesthetic combines elven elegance with a distinctly severe cold-climate identity.
+
+**Primary instinct:** **Thermal-Boundary Sense**, reading heat loss, freezing lines and the movement of hot-cold boundaries.
+
+### 🎭 Ƙɐꞎʏŧɨ’Ƴħɍǽ
+
+**Familiar fantasy reference:** Shapeshifters or changelings.
+
+Ƙɐꞎʏŧɨ’Ƴħɍǽ are blue-white, energy-marked humanoids capable of taking other humanoid forms. Their gift is not simple illusion: it is tied to an unusually deep understanding of body structure, active essence and form itself. They are also strongly associated with architecture, arcane craft, talismans and the manipulation of Primordial A̤ɐ͜ɨǣ́ꞎ͡ƣ.
+
+**Primary instinct:** **Inner-Body / Essence Sense**, allowing them to read their own tissues, proportions, organs, form and active essences from within.
+
+### 🌸 Þǽ’Ɍʏŋ
+
+**Familiar fantasy reference:** Pixies or fae.
+
+Þǽ’Ɍʏŋ are small, graceful and strongly nature-linked beings with two distinct forms. Their settlements favor forests, water sources, high trees, flowering valleys and hidden natural spaces. They fill the fairy-like niche of the setting while remaining a full people with their own communities rather than decorative magical creatures.
+
+**Primary instinct:** **Air-Space Sense**, reading air currents, three-dimensional space, natural flight paths and environmental passages.
+
+### 🐚 Ŋɇɍǽþ’Ʋǽꞎűŋɐ
+
+**Familiar fantasy reference:** A lamia-mermaid or aquatic serpent-folk analogue.
+
+Ŋɇɍǽþ’Ʋǽꞎűŋɐ are an aquatic-serpentine people associated with underground waterways, caves, hidden pools and remote natural passages. Their large serpentine bodies, strong voices and solitary tendencies give them a very different silhouette and social rhythm from ordinary merfolk. They are dangerous hunters, but their identity is broader than simply being monsters.
+
+**Primary instinct:** **Resonance-Emotion Sense**, interpreting how sound and vibration alter attention, emotion and behavior in living beings.
+
+### ⛏️ Ǥɵɍűɱ’Ɱǽχɍʏþ
+
+**Familiar fantasy reference:** No direct equivalent; think subterranean ecological engineers rather than dwarves.
+
+Ǥɵɍűɱ’Ɱǽχɍʏþ consume rock, soil and mineral matter and return transformed energy and material effects to the underground environment. Over long periods their presence can enrich cave ecosystems and contribute to the formation of rare natural A̤ɐ͜ɨǣ́ꞎ͡ƣ crystal environments. Their role in the world is as much geological and ecological as cultural.
+
+**Primary instinct:** **Soil-Biome Sense**, reading the state of stone and mineral, moisture and the life-carrying potential of underground spaces.
+
+### 🧲 Ʋɇƙþɐɍ’Ŋűɱʏɍ
+
+**Familiar fantasy reference:** Gravity and motion engineers.
+
+Ʋɇƙþɐɍ’Ŋűɱʏɍ can temporarily reduce or suppress effective weight and surface friction in living or non-living targets. This does not create free movement: an object still needs a push, pull, wind, mechanism or other force to gain direction and speed. Their civilization therefore treats physics, safety, transport and engineering as parts of the same discipline.
+
+**Primary instinct:** **Inertia-Vector Sense**, reading momentum, friction, weight direction and the likely continuation or stopping path of movement.
+
+### 🌩️ Þʏɍɐ’Ʋɇƙűɍʏŋ
+
+**Familiar fantasy reference:** Stormfolk or lightning nomads.
+
+Þʏɍɐ’Ʋɇƙűɍʏŋ live among storm biomes, aerial routes, balloon fleets and lightning-harvest regions. Their bodies use electrical energy as a fundamental life resource, and their societies store harvested lightning in vessels that can support individuals, ships and settlements. They can release electrical attacks and shape storm or vortex effects, but doing so consumes the same energy reserve that sustains them.
+
+**Primary instinct:** **Electric-Field Sense**, reading charge, lightning paths and changes in atmospheric electromagnetic conditions.
+
+### 🌱 Śʏꞎ’Ŋɇþɍǿþ
+
+**Familiar fantasy reference:** Plantfolk or a dryad-adjacent humanoid people.
+
+Śʏꞎ’Ŋɇþɍǿþ can appear strikingly humanoid from the outside, but their internal biology is fundamentally botanical. Roots, growth, plant nutrition, healing and flowering are genuine biological processes rather than costume or symbolism. Their cities and communities naturally favor living forests, root architecture, gardens and environments where plant networks can thrive.
+
+**Primary instinct:** **Plant-Network Sense**, reading plant health, root systems, growth, water and nutrient conditions and botanical stress.
+
+### 🌌 Ɐśŧɇɍʏŋ’Ʋɇʏɍχɐ
+
+**Familiar fantasy reference:** Cosmic humanoids or starfolk.
+
+Ɐśŧɇɍʏŋ’Ʋɇʏɍχɐ inhabit the outer atmospheric and cosmic layers of the setting and can survive journeys that are far beyond ordinary sky travel. They live for thousands of years and possess a specialized high-speed state in which perception, reaction, movement and flight rise together to cosmic scales. They are not indestructible, and their culture is oriented more toward navigation, exploration, astronomy and distant travel than conquest.
+
+**Primary instinct:** **Cosmic-Layer Sense**, reading cosmic direction, massive bodies, stellar routes, layer boundaries and the spatial limits of the universe.
+
+### 🐺 Ʋħɐṙǥǽþ’Ɍűŋ
+
+**Familiar fantasy reference:** Werewolves.
+
+Ʋħɐṙǥǽþ’Ɍűŋ are humans affected by a true werewolf transformation rather than a separate civilization born in isolation. Their transformation is linked to a **darkness threshold**, not the conventional full-moon rule. By day they can live as ordinary humans; when the transformation state takes over they become powerful solitary predators whose instincts are difficult to control, making their lore as tragic as it is dangerous.
+
+**Primary instinct:** **Transformation-Threshold Sense**, detecting the approach of their own transformation state and the resonance associated with it.
+
+---
+
+For JOA, these peoples are not cosmetic presets. Race/origin can shape **identity, lore, abilities, relationships, world placement and hybrid ancestry**, while the character-sheet architecture remains modular enough to support non-canonical Outer Realm origins as well.
 
 ---
 
